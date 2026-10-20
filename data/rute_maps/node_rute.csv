@@ -1,0 +1,91 @@
+rute,urutan,tipe,lat,lon,jarak_kumulatif_m,instruksi
+Rute 1,1,asal,-7.595159,110.939797,0.0,Mulai
+Rute 1,2,belokan,-7.595342,110.940462,76.1,Turn left.
+Rute 1,3,belokan,-7.594606,110.940695,161.8,Turn right.
+Rute 1,4,interval,-7.5949389,110.9416345,271.9,-
+Rute 1,5,interval,-7.5952802,110.9425714,381.9,-
+Rute 1,6,interval,-7.5956109,110.9435122,491.9,-
+Rute 1,7,belokan,-7.595921,110.94446,602.0,Turn right.
+Rute 1,8,belokan,-7.596231,110.944377,637.6,Turn left.
+Rute 1,9,interval,-7.5964304,110.9452031,731.3,-
+Rute 1,10,interval,-7.5966239,110.9460306,825.1,-
+Rute 1,11,interval,-7.596804,110.9468609,918.8,-
+Rute 1,12,interval,-7.5969736,110.9476937,1012.5,-
+Rute 1,13,interval,-7.5971836,110.9485169,1106.3,-
+Rute 1,14,interval,-7.5974148,110.9493345,1200.0,-
+Rute 1,15,belokan,-7.597636,110.950155,1293.7,Turn left onto Jalan Nyi Ageng Karang.
+Rute 1,16,belokan,-7.597224,110.950324,1343.2,Turn right onto Jalan Lawu.
+Rute 1,17,interval,-7.5975998,110.9512136,1449.8,-
+Rute 1,18,interval,-7.5979961,110.9520939,1556.4,-
+Rute 1,19,belokan,-7.598302,110.952975,1663.0,Keep left to stay on Jalan Lawu.
+Rute 1,20,interval,-7.5980831,110.9538255,1764.9,-
+Rute 1,21,interval,-7.598153,110.9547477,1866.8,-
+Rute 1,22,interval,-7.5982343,110.9556685,1968.8,-
+Rute 1,23,interval,-7.5982996,110.956591,2070.7,-
+Rute 1,24,belokan,-7.598413,110.957508,2172.7,Turn left.
+Rute 1,25,belokan,-7.597456,110.957845,2285.5,Turn right onto Jalan Cipto Mangun Kusumo.
+Rute 1,26,belokan,-7.597641,110.958465,2356.9,Turn left.
+Rute 1,27,interval,-7.5967194,110.9588081,2466.1,-
+Rute 1,28,belokan,-7.595806,110.959173,2575.3,Turn right.
+Rute 1,29,belokan,-7.595927,110.959493,2613.1,Turn right.
+Rute 1,30,tujuan,-7.596627,110.959618,2716.6,Tiba
+Rute 2,1,asal,-7.595159,110.939797,0.0,Mulai
+Rute 2,2,belokan,-7.595342,110.940462,76.1,Turn left.
+Rute 2,3,interval,-7.5946573,110.9406788,155.9,-
+Rute 2,4,belokan,-7.593973,110.940897,235.7,Turn right.
+Rute 2,5,interval,-7.5942693,110.9418509,345.9,-
+Rute 2,6,interval,-7.5946305,110.942782,456.2,-
+Rute 2,7,belokan,-7.594932,110.943735,566.5,Turn left.
+Rute 2,8,belokan,-7.594777,110.943785,584.6,Turn right onto Jalan Lawu.
+Rute 2,9,interval,-7.595059,110.9446335,683.4,-
+Rute 2,10,interval,-7.5953489,110.945481,782.2,-
+Rute 2,11,interval,-7.5956439,110.9463268,881.0,-
+Rute 2,12,interval,-7.5959182,110.9471792,979.8,-
+Rute 2,13,interval,-7.5962414,110.9480139,1078.7,-
+Rute 2,14,interval,-7.5965835,110.9488414,1177.5,-
+Rute 2,15,interval,-7.5969268,110.9496682,1276.3,-
+Rute 2,16,interval,-7.5972918,110.9504857,1375.1,-
+Rute 2,17,interval,-7.597639,110.9513109,1474.0,-
+Rute 2,18,interval,-7.5980096,110.9521255,1572.8,-
+Rute 2,19,interval,-7.5983096,110.9529398,1671.6,-
+Rute 2,20,interval,-7.5981486,110.953814,1770.4,-
+Rute 2,21,interval,-7.5982148,110.954708,1869.3,-
+Rute 2,22,interval,-7.5983028,110.9556001,1968.1,-
+Rute 2,23,interval,-7.5983881,110.9564925,2066.9,-
+Rute 2,24,interval,-7.59847,110.9573853,2165.7,-
+Rute 2,25,belokan,-7.598734,110.958238,2264.6,Turn left onto Jalan Tentara Pelajar.
+Rute 2,26,belokan,-7.597521,110.958056,2401.0,Turn right onto Jalan Cipto Mangun Kusumo.
+Rute 2,27,belokan,-7.597641,110.958465,2448.1,Turn left.
+Rute 2,28,interval,-7.5967194,110.9588081,2557.3,-
+Rute 2,29,belokan,-7.595806,110.959173,2666.5,Turn right.
+Rute 2,30,belokan,-7.595927,110.959493,2704.3,Turn right.
+Rute 2,31,tujuan,-7.596627,110.959618,2807.8,Tiba
+Rute 3,1,asal,-7.595159,110.939797,0.0,Mulai
+Rute 3,2,belokan,-7.595342,110.940462,76.1,Turn right.
+Rute 3,3,belokan,-7.596458,110.940098,206.5,Turn left.
+Rute 3,4,interval,-7.5967345,110.9411039,321.5,-
+Rute 3,5,interval,-7.596916,110.9421304,436.6,-
+Rute 3,6,belokan,-7.597109,110.943155,551.7,Keep right at the fork.
+Rute 3,7,interval,-7.5973443,110.9440016,648.6,-
+Rute 3,8,interval,-7.5976293,110.9448322,745.5,-
+Rute 3,9,interval,-7.5978695,110.9456773,842.5,-
+Rute 3,10,interval,-7.5980463,110.9465384,939.4,-
+Rute 3,11,interval,-7.5982029,110.9474005,1036.3,-
+Rute 3,12,interval,-7.5984228,110.9482479,1133.3,-
+Rute 3,13,interval,-7.5985079,110.9491231,1230.2,-
+Rute 3,14,interval,-7.5986144,110.9499953,1327.1,-
+Rute 3,15,interval,-7.5988348,110.9508457,1424.1,-
+Rute 3,16,interval,-7.5990094,110.951707,1521.0,-
+Rute 3,17,belokan,-7.599167,110.952572,1617.9,Turn left onto Jalan Sukoharjo - Karang Anyar.
+Rute 3,18,belokan,-7.598331,110.952845,1717.3,Turn right onto Jalan Lawu.
+Rute 3,19,interval,-7.5980848,110.9536664,1823.7,-
+Rute 3,20,interval,-7.5981442,110.9546282,1930.0,-
+Rute 3,21,interval,-7.5982308,110.9555888,2036.4,-
+Rute 3,22,interval,-7.598296,110.9565512,2142.7,-
+Rute 3,23,belokan,-7.598413,110.957508,2249.0,Turn left.
+Rute 3,24,belokan,-7.597456,110.957845,2361.9,Turn right onto Jalan Cipto Mangun Kusumo.
+Rute 3,25,belokan,-7.597641,110.958465,2433.2,Turn left.
+Rute 3,26,interval,-7.5967194,110.9588081,2542.5,-
+Rute 3,27,belokan,-7.595806,110.959173,2651.7,Turn right.
+Rute 3,28,belokan,-7.595927,110.959493,2689.5,Turn right.
+Rute 3,29,tujuan,-7.596627,110.959618,2792.9,Tiba

@@ -1,0 +1,47 @@
+rute,langkah,instruksi,nama_jalan,jarak_m,idx_titik_awal,idx_titik_akhir
+Rute 1,1,Walk east.,-,75.0,0,3
+Rute 1,2,Turn left.,-,86.0,3,4
+Rute 1,3,Turn right.,-,344.0,4,12
+Rute 1,4,Turn left.,-,80.0,12,14
+Rute 1,5,Turn right.,-,94.0,14,19
+Rute 1,6,Turn left.,-,18.0,19,20
+Rute 1,7,Turn right onto Jalan Lawu.,Jalan Lawu,962.0,20,56
+Rute 1,8,Keep left to stay on Jalan Lawu.,Jalan Lawu,525.0,56,73
+Rute 1,9,Turn left.,-,113.0,73,77
+Rute 1,10,Turn right onto Jalan Cipto Mangun Kusumo.,Jalan Cipto Mangun Kusumo,71.0,77,80
+Rute 1,11,Turn left.,-,219.0,80,83
+Rute 1,12,Turn right.,-,37.0,83,85
+Rute 1,13,Turn right.,-,103.0,85,90
+Rute 1,14,Your destination is on the right.,-,0.0,90,90
+Rute 2,1,Walk east.,-,75.0,0,3
+Rute 2,2,Turn left.,-,86.0,3,4
+Rute 2,3,Turn right.,-,344.0,4,12
+Rute 2,4,Turn left.,-,80.0,12,14
+Rute 2,5,Turn right.,-,94.0,14,19
+Rute 2,6,Turn left.,-,18.0,19,20
+Rute 2,7,Turn right onto Jalan Lawu.,Jalan Lawu,474.0,20,38
+Rute 2,8,Turn left.,-,177.0,38,49
+Rute 2,9,Turn right.,-,550.0,49,66
+Rute 2,10,Turn left onto Jalan Insinyur Juanda.,Jalan Insinyur Juanda,32.0,66,67
+Rute 2,11,Turn right onto Jalan Cipto Mangun Kusumo.,Jalan Cipto Mangun Kusumo,92.0,67,69
+Rute 2,12,Turn left onto Jalan Gurami.,Jalan Gurami,226.0,69,72
+Rute 2,13,Turn right.,-,430.0,72,84
+Rute 2,14,Turn right.,-,103.0,84,89
+Rute 2,15,Your destination is on the right.,-,0.0,89,89
+Rute 3,1,Walk east.,-,75.0,0,3
+Rute 3,2,Turn left.,-,86.0,3,4
+Rute 3,3,Turn right.,-,344.0,4,12
+Rute 3,4,Turn left.,-,80.0,12,14
+Rute 3,5,Turn right.,-,94.0,14,19
+Rute 3,6,Turn left.,-,18.0,19,20
+Rute 3,7,Turn right onto Jalan Lawu.,Jalan Lawu,30.0,20,22
+Rute 3,8,Turn left onto Jalan Mayor Sunaryo.,Jalan Mayor Sunaryo,263.0,22,28
+Rute 3,9,Turn right.,-,264.0,28,35
+Rute 3,10,Turn left onto Jalan Mayor Kusmanto.,Jalan Mayor Kusmanto,173.0,35,48
+Rute 3,11,Turn right onto Jalan P. Senopati.,Jalan P. Senopati,279.0,48,54
+Rute 3,12,Turn left to stay on Jalan P. Senopati.,Jalan P. Senopati,37.0,54,56
+Rute 3,13,Turn right.,-,416.0,56,68
+Rute 3,14,Turn right onto Jalan Insinyur Juanda.,Jalan Insinyur Juanda,17.0,68,69
+Rute 3,15,Turn left.,-,537.0,69,85
+Rute 3,16,Turn right.,-,103.0,85,90
+Rute 3,17,Your destination is on the right.,-,0.0,90,90
