@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f378359c37585e306abf3b070ebf227e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f378359c37585e306abf3b070ebf227e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f378359c37585e306abf3b070ebf227e = L.map(
+                "map_f378359c37585e306abf3b070ebf227e",
+                {
+                    center: [-7.595759300993436, 110.94974715749508],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_572f129fb71eda3a2df2397a86305a01 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_572f129fb71eda3a2df2397a86305a01.addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var tile_layer_26de9f7216e17ab6ab71c0dbae44a65d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var feature_group_013c1274b477909dde7b187a258785f4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_fc58980885f43d9e7dff02bdc36db881 = L.polyline(
+                [[-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.594606, 110.940695], [-7.594782, 110.941234], [-7.594794, 110.941272], [-7.594831, 110.94136], [-7.595033, 110.941874], [-7.595296, 110.942616], [-7.595489, 110.943163], [-7.595509, 110.943223], [-7.595651, 110.943626], [-7.59567, 110.943682], [-7.595765, 110.943958], [-7.595792, 110.944038], [-7.595921, 110.94446], [-7.596231, 110.944377], [-7.596269, 110.944511], [-7.596297, 110.944624], [-7.596322, 110.944722], [-7.596398, 110.945058], [-7.59646, 110.945336], [-7.596516, 110.945564], [-7.596531, 110.94564], [-7.59662, 110.946015], [-7.596674, 110.946232], [-7.596737, 110.946487], [-7.596743, 110.946524], [-7.59687, 110.947225], [-7.596945, 110.947569], [-7.597086, 110.948184], [-7.597183, 110.948515], [-7.5973, 110.948917], [-7.597381, 110.949194], [-7.597426, 110.949381], [-7.597451, 110.949485], [-7.597636, 110.950155], [-7.597438, 110.950233], [-7.597224, 110.950324], [-7.597252, 110.950391], [-7.597369, 110.950669], [-7.597472, 110.9509], [-7.597488, 110.950936], [-7.597666, 110.951378], [-7.597682, 110.951414], [-7.597854, 110.951767], [-7.597931, 110.95194], [-7.597979, 110.952054], [-7.598149, 110.952451], [-7.598248, 110.952665], [-7.598276, 110.952798], [-7.598331, 110.952845], [-7.598302, 110.952975], [-7.598252, 110.953195], [-7.598196, 110.953359], [-7.598146, 110.953562], [-7.598141, 110.953677], [-7.598144, 110.953724], [-7.598077, 110.953741], [-7.598113, 110.954241], [-7.598136, 110.954517], [-7.598164, 110.954897], [-7.598178, 110.955048], [-7.598225, 110.955454], [-7.598241, 110.955823], [-7.59827, 110.956268], [-7.598286, 110.95644], [-7.59833, 110.956929], [-7.598343, 110.957045], [-7.598374, 110.957315], [-7.598413, 110.957508], [-7.598287, 110.957543], [-7.597763, 110.957732], [-7.597565, 110.957816], [-7.597456, 110.957845], [-7.597472, 110.957897], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 9}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+            var poly_line_01ed19eebee93de6aa1be67a53191cec = L.polyline(
+                [[-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.594606, 110.940695], [-7.594782, 110.941234], [-7.594794, 110.941272], [-7.594831, 110.94136], [-7.595033, 110.941874], [-7.595296, 110.942616], [-7.595489, 110.943163], [-7.595509, 110.943223], [-7.595651, 110.943626], [-7.59567, 110.943682], [-7.595765, 110.943958], [-7.595792, 110.944038], [-7.595921, 110.94446], [-7.596231, 110.944377], [-7.596269, 110.944511], [-7.596297, 110.944624], [-7.596322, 110.944722], [-7.596398, 110.945058], [-7.59646, 110.945336], [-7.596516, 110.945564], [-7.596531, 110.94564], [-7.59662, 110.946015], [-7.596674, 110.946232], [-7.596737, 110.946487], [-7.596743, 110.946524], [-7.59687, 110.947225], [-7.596945, 110.947569], [-7.597086, 110.948184], [-7.597183, 110.948515], [-7.5973, 110.948917], [-7.597381, 110.949194], [-7.597426, 110.949381], [-7.597451, 110.949485], [-7.597636, 110.950155], [-7.597438, 110.950233], [-7.597224, 110.950324], [-7.597252, 110.950391], [-7.597369, 110.950669], [-7.597472, 110.9509], [-7.597488, 110.950936], [-7.597666, 110.951378], [-7.597682, 110.951414], [-7.597854, 110.951767], [-7.597931, 110.95194], [-7.597979, 110.952054], [-7.598149, 110.952451], [-7.598248, 110.952665], [-7.598276, 110.952798], [-7.598331, 110.952845], [-7.598302, 110.952975], [-7.598252, 110.953195], [-7.598196, 110.953359], [-7.598146, 110.953562], [-7.598141, 110.953677], [-7.598144, 110.953724], [-7.598077, 110.953741], [-7.598113, 110.954241], [-7.598136, 110.954517], [-7.598164, 110.954897], [-7.598178, 110.955048], [-7.598225, 110.955454], [-7.598241, 110.955823], [-7.59827, 110.956268], [-7.598286, 110.95644], [-7.59833, 110.956929], [-7.598343, 110.957045], [-7.598374, 110.957315], [-7.598413, 110.957508], [-7.598287, 110.957543], [-7.597763, 110.957732], [-7.597565, 110.957816], [-7.597456, 110.957845], [-7.597472, 110.957897], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "#1a47e0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#1a47e0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+            poly_line_01ed19eebee93de6aa1be67a53191cec.bindTooltip(
+                `<div>
+                     Rute 1 | 2.72 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_16b32329f37edfeea09cc7286711c93c = L.circleMarker(
+                [-7.595159, 110.939797],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_4174c168239fe4822883aa1207293345 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_33065e8fedcfca79bb7c4be6b4354ea1 = $(`<div id="html_33065e8fedcfca79bb7c4be6b4354ea1" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 1 (asal)<br>Mulai<br>-7.5951590, 110.9397970<br>0 m dari awal</div>`)[0];
+                popup_4174c168239fe4822883aa1207293345.setContent(html_33065e8fedcfca79bb7c4be6b4354ea1);
+            
+        
+
+        circle_marker_16b32329f37edfeea09cc7286711c93c.bindPopup(popup_4174c168239fe4822883aa1207293345)
+        ;
+
+        
+    
+    
+            var circle_marker_b69c890faaa4cc79c72fb570aaf447df = L.circleMarker(
+                [-7.595342, 110.940462],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_3db0b7a0ba31eef5a08d9e3aecea55f2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c75eb200941e9f3e753490c3031a9156 = $(`<div id="html_c75eb200941e9f3e753490c3031a9156" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 2 (belokan)<br>Turn left.<br>-7.5953420, 110.9404620<br>76 m dari awal</div>`)[0];
+                popup_3db0b7a0ba31eef5a08d9e3aecea55f2.setContent(html_c75eb200941e9f3e753490c3031a9156);
+            
+        
+
+        circle_marker_b69c890faaa4cc79c72fb570aaf447df.bindPopup(popup_3db0b7a0ba31eef5a08d9e3aecea55f2)
+        ;
+
+        
+    
+    
+            var circle_marker_d66dee620948ad9246e082bf25ad2738 = L.circleMarker(
+                [-7.594606, 110.940695],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_8e9ea1378bebd5d766fdc705a4385f76 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_37d588ecf7305a92f1b1906022f0bacc = $(`<div id="html_37d588ecf7305a92f1b1906022f0bacc" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 3 (belokan)<br>Turn right.<br>-7.5946060, 110.9406950<br>162 m dari awal</div>`)[0];
+                popup_8e9ea1378bebd5d766fdc705a4385f76.setContent(html_37d588ecf7305a92f1b1906022f0bacc);
+            
+        
+
+        circle_marker_d66dee620948ad9246e082bf25ad2738.bindPopup(popup_8e9ea1378bebd5d766fdc705a4385f76)
+        ;
+
+        
+    
+    
+            var circle_marker_57e27d02c7f325f734fa97bf8ccb4712 = L.circleMarker(
+                [-7.594938877123903, 110.94163449921626],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_3fec5a5e629b19d5934585fe10bc7bf2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3d9692abf092baf52c5b4df56ea339fd = $(`<div id="html_3d9692abf092baf52c5b4df56ea339fd" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 4 (interval)<br>-<br>-7.5949389, 110.9416345<br>272 m dari awal</div>`)[0];
+                popup_3fec5a5e629b19d5934585fe10bc7bf2.setContent(html_3d9692abf092baf52c5b4df56ea339fd);
+            
+        
+
+        circle_marker_57e27d02c7f325f734fa97bf8ccb4712.bindPopup(popup_3fec5a5e629b19d5934585fe10bc7bf2)
+        ;
+
+        
+    
+    
+            var circle_marker_efc29bbf18e1d5be79704b296abfa210 = L.circleMarker(
+                [-7.5952801806321, 110.94257136893162],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_a67be82fa9f40dcff89dd5e6acddd4c0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6861ccc3988f9bb34dadca753bdfb79f = $(`<div id="html_6861ccc3988f9bb34dadca753bdfb79f" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 5 (interval)<br>-<br>-7.5952802, 110.9425714<br>382 m dari awal</div>`)[0];
+                popup_a67be82fa9f40dcff89dd5e6acddd4c0.setContent(html_6861ccc3988f9bb34dadca753bdfb79f);
+            
+        
+
+        circle_marker_efc29bbf18e1d5be79704b296abfa210.bindPopup(popup_a67be82fa9f40dcff89dd5e6acddd4c0)
+        ;
+
+        
+    
+    
+            var circle_marker_f41a962dfdec641afa72b4435944547e = L.circleMarker(
+                [-7.595610902426336, 110.94351220195642],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_e0df74c5b8cf9717357cc6cfb9d5733d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_047c31d084808d85ca7bd26d09f3b706 = $(`<div id="html_047c31d084808d85ca7bd26d09f3b706" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 6 (interval)<br>-<br>-7.5956109, 110.9435122<br>492 m dari awal</div>`)[0];
+                popup_e0df74c5b8cf9717357cc6cfb9d5733d.setContent(html_047c31d084808d85ca7bd26d09f3b706);
+            
+        
+
+        circle_marker_f41a962dfdec641afa72b4435944547e.bindPopup(popup_e0df74c5b8cf9717357cc6cfb9d5733d)
+        ;
+
+        
+    
+    
+            var circle_marker_1ed05bd6bd27b33aa1bb6fe7363fe604 = L.circleMarker(
+                [-7.595921, 110.94446],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_944d719b15849fa4f0f2e383129de3f5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f3d7808e209938f5bb645dda767e92b1 = $(`<div id="html_f3d7808e209938f5bb645dda767e92b1" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 7 (belokan)<br>Turn right.<br>-7.5959210, 110.9444600<br>602 m dari awal</div>`)[0];
+                popup_944d719b15849fa4f0f2e383129de3f5.setContent(html_f3d7808e209938f5bb645dda767e92b1);
+            
+        
+
+        circle_marker_1ed05bd6bd27b33aa1bb6fe7363fe604.bindPopup(popup_944d719b15849fa4f0f2e383129de3f5)
+        ;
+
+        
+    
+    
+            var circle_marker_09145248e7bfb666a7a2877d71657749 = L.circleMarker(
+                [-7.596231, 110.944377],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_7edc371ad7d4dd8e1875db3dd68a3433 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a963d16c0debcd07fb373f2f2efc46b = $(`<div id="html_8a963d16c0debcd07fb373f2f2efc46b" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 8 (belokan)<br>Turn left.<br>-7.5962310, 110.9443770<br>638 m dari awal</div>`)[0];
+                popup_7edc371ad7d4dd8e1875db3dd68a3433.setContent(html_8a963d16c0debcd07fb373f2f2efc46b);
+            
+        
+
+        circle_marker_09145248e7bfb666a7a2877d71657749.bindPopup(popup_7edc371ad7d4dd8e1875db3dd68a3433)
+        ;
+
+        
+    
+    
+            var circle_marker_238ec23a3e6430e628606c288ef51057 = L.circleMarker(
+                [-7.596430351900493, 110.94520306174738],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_39609bf9f40e035580c8e6ba6c1499ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ce486fc0f84e4e702f8b875b561b5a12 = $(`<div id="html_ce486fc0f84e4e702f8b875b561b5a12" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 9 (interval)<br>-<br>-7.5964304, 110.9452031<br>731 m dari awal</div>`)[0];
+                popup_39609bf9f40e035580c8e6ba6c1499ef.setContent(html_ce486fc0f84e4e702f8b875b561b5a12);
+            
+        
+
+        circle_marker_238ec23a3e6430e628606c288ef51057.bindPopup(popup_39609bf9f40e035580c8e6ba6c1499ef)
+        ;
+
+        
+    
+    
+            var circle_marker_4a86973fa728b4291e3ae0cf31487a29 = L.circleMarker(
+                [-7.596623891702586, 110.94603063887891],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_97b2c881c043e0541f2629e2131ad4e8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_94d6b48e81867d79a27e67def49f151a = $(`<div id="html_94d6b48e81867d79a27e67def49f151a" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 10 (interval)<br>-<br>-7.5966239, 110.9460306<br>825 m dari awal</div>`)[0];
+                popup_97b2c881c043e0541f2629e2131ad4e8.setContent(html_94d6b48e81867d79a27e67def49f151a);
+            
+        
+
+        circle_marker_4a86973fa728b4291e3ae0cf31487a29.bindPopup(popup_97b2c881c043e0541f2629e2131ad4e8)
+        ;
+
+        
+    
+    
+            var circle_marker_d9bfd7d992e1663ad517031725a824d3 = L.circleMarker(
+                [-7.596804034070787, 110.94686088884741],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_b5d2053a966f0e601c78f90117ec9bd7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b9b88c5858bea4e3d79307927472fa66 = $(`<div id="html_b9b88c5858bea4e3d79307927472fa66" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 11 (interval)<br>-<br>-7.5968040, 110.9468609<br>919 m dari awal</div>`)[0];
+                popup_b5d2053a966f0e601c78f90117ec9bd7.setContent(html_b9b88c5858bea4e3d79307927472fa66);
+            
+        
+
+        circle_marker_d9bfd7d992e1663ad517031725a824d3.bindPopup(popup_b5d2053a966f0e601c78f90117ec9bd7)
+        ;
+
+        
+    
+    
+            var circle_marker_678b707b9c7a7907cb3b81b3a944ef25 = L.circleMarker(
+                [-7.59697359307161, 110.94769371446128],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_838ab846acaaef91328e1e73fffc2e73 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5c8c26906abcd10d90d8de0c18a75ff9 = $(`<div id="html_5c8c26906abcd10d90d8de0c18a75ff9" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 12 (interval)<br>-<br>-7.5969736, 110.9476937<br>1013 m dari awal</div>`)[0];
+                popup_838ab846acaaef91328e1e73fffc2e73.setContent(html_5c8c26906abcd10d90d8de0c18a75ff9);
+            
+        
+
+        circle_marker_678b707b9c7a7907cb3b81b3a944ef25.bindPopup(popup_838ab846acaaef91328e1e73fffc2e73)
+        ;
+
+        
+    
+    
+            var circle_marker_ad64acca2c228fd87b5339dbcf1c6550 = L.circleMarker(
+                [-7.597183553216117, 110.94851690079383],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_a8f1722ac7626938e1d62ab752266400 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f4a3db59ee0125b2d83997425fe3170c = $(`<div id="html_f4a3db59ee0125b2d83997425fe3170c" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 13 (interval)<br>-<br>-7.5971836, 110.9485169<br>1106 m dari awal</div>`)[0];
+                popup_a8f1722ac7626938e1d62ab752266400.setContent(html_f4a3db59ee0125b2d83997425fe3170c);
+            
+        
+
+        circle_marker_ad64acca2c228fd87b5339dbcf1c6550.bindPopup(popup_a8f1722ac7626938e1d62ab752266400)
+        ;
+
+        
+    
+    
+            var circle_marker_34e1a57a6ce18ff51798eff0b17dfb16 = L.circleMarker(
+                [-7.597414810338285, 110.9493345007391],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_acdab54a30dfbae6fdafdf72cbe4bfa3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5734ecb6d377d09cf18d4f9cfea95232 = $(`<div id="html_5734ecb6d377d09cf18d4f9cfea95232" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 14 (interval)<br>-<br>-7.5974148, 110.9493345<br>1200 m dari awal</div>`)[0];
+                popup_acdab54a30dfbae6fdafdf72cbe4bfa3.setContent(html_5734ecb6d377d09cf18d4f9cfea95232);
+            
+        
+
+        circle_marker_34e1a57a6ce18ff51798eff0b17dfb16.bindPopup(popup_acdab54a30dfbae6fdafdf72cbe4bfa3)
+        ;
+
+        
+    
+    
+            var circle_marker_a0c5369063faff604b6e4e49fd6f18d8 = L.circleMarker(
+                [-7.597636, 110.950155],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_bf502206e11d65a9ab1f28c506ec5de6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_871199c7ff2e622f5e8725d212e582fc = $(`<div id="html_871199c7ff2e622f5e8725d212e582fc" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 15 (belokan)<br>Turn left onto Jalan Nyi Ageng Karang.<br>-7.5976360, 110.9501550<br>1294 m dari awal</div>`)[0];
+                popup_bf502206e11d65a9ab1f28c506ec5de6.setContent(html_871199c7ff2e622f5e8725d212e582fc);
+            
+        
+
+        circle_marker_a0c5369063faff604b6e4e49fd6f18d8.bindPopup(popup_bf502206e11d65a9ab1f28c506ec5de6)
+        ;
+
+        
+    
+    
+            var circle_marker_eb8ad420e4133a27b7d9144da8369f52 = L.circleMarker(
+                [-7.597224, 110.950324],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_f7ebceb444182caf50626c2f1e52e55e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4eadfc5c16ee51d8d97698dcb6d6d816 = $(`<div id="html_4eadfc5c16ee51d8d97698dcb6d6d816" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 16 (belokan)<br>Turn right onto Jalan Lawu.<br>-7.5972240, 110.9503240<br>1343 m dari awal</div>`)[0];
+                popup_f7ebceb444182caf50626c2f1e52e55e.setContent(html_4eadfc5c16ee51d8d97698dcb6d6d816);
+            
+        
+
+        circle_marker_eb8ad420e4133a27b7d9144da8369f52.bindPopup(popup_f7ebceb444182caf50626c2f1e52e55e)
+        ;
+
+        
+    
+    
+            var circle_marker_20759b6f53a3f4f8af8b47fc054e7abd = L.circleMarker(
+                [-7.59759980192528, 110.95121362051108],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_4c43cd3f90f75cc9c82fa54045ccd3f3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9b40e2759ea908d4e66417113c2e2d59 = $(`<div id="html_9b40e2759ea908d4e66417113c2e2d59" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 17 (interval)<br>-<br>-7.5975998, 110.9512136<br>1450 m dari awal</div>`)[0];
+                popup_4c43cd3f90f75cc9c82fa54045ccd3f3.setContent(html_9b40e2759ea908d4e66417113c2e2d59);
+            
+        
+
+        circle_marker_20759b6f53a3f4f8af8b47fc054e7abd.bindPopup(popup_4c43cd3f90f75cc9c82fa54045ccd3f3)
+        ;
+
+        
+    
+    
+            var circle_marker_da21a857f9c8c7ea848b8dcb7a4145c2 = L.circleMarker(
+                [-7.597996066740678, 110.95209385585912],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_0b9ebf2f71fd0cfb18e592c557359173 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5fa245626a98c9ee7a99ce1fdb7a0d5e = $(`<div id="html_5fa245626a98c9ee7a99ce1fdb7a0d5e" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 18 (interval)<br>-<br>-7.5979961, 110.9520939<br>1556 m dari awal</div>`)[0];
+                popup_0b9ebf2f71fd0cfb18e592c557359173.setContent(html_5fa245626a98c9ee7a99ce1fdb7a0d5e);
+            
+        
+
+        circle_marker_da21a857f9c8c7ea848b8dcb7a4145c2.bindPopup(popup_0b9ebf2f71fd0cfb18e592c557359173)
+        ;
+
+        
+    
+    
+            var circle_marker_1d78f339d7fe4416658174245e0bc237 = L.circleMarker(
+                [-7.598302, 110.952975],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_0954820771f277869b37f892c7d52208 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_49d16713878fa423ba181b60e99d125b = $(`<div id="html_49d16713878fa423ba181b60e99d125b" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 19 (belokan)<br>Keep left to stay on Jalan Lawu.<br>-7.5983020, 110.9529750<br>1663 m dari awal</div>`)[0];
+                popup_0954820771f277869b37f892c7d52208.setContent(html_49d16713878fa423ba181b60e99d125b);
+            
+        
+
+        circle_marker_1d78f339d7fe4416658174245e0bc237.bindPopup(popup_0954820771f277869b37f892c7d52208)
+        ;
+
+        
+    
+    
+            var circle_marker_d8def5ed6d35dd66648d9668af3a34bd = L.circleMarker(
+                [-7.598083080420662, 110.95382545028697],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_f4c6bedd74c7e94fc0292d429b52a797 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8098b677eee79c27337e6e377ec7b240 = $(`<div id="html_8098b677eee79c27337e6e377ec7b240" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 20 (interval)<br>-<br>-7.5980831, 110.9538255<br>1765 m dari awal</div>`)[0];
+                popup_f4c6bedd74c7e94fc0292d429b52a797.setContent(html_8098b677eee79c27337e6e377ec7b240);
+            
+        
+
+        circle_marker_d8def5ed6d35dd66648d9668af3a34bd.bindPopup(popup_f4c6bedd74c7e94fc0292d429b52a797)
+        ;
+
+        
+    
+    
+            var circle_marker_4d8741cf9faacf36d3c95e3ce3c725ab = L.circleMarker(
+                [-7.598152996363683, 110.9547476649357],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_c9f0a8eda90fa511ad3c94ae3c91571c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_eb5faa01e256e5fa7abdb630bf2bde9d = $(`<div id="html_eb5faa01e256e5fa7abdb630bf2bde9d" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 21 (interval)<br>-<br>-7.5981530, 110.9547477<br>1867 m dari awal</div>`)[0];
+                popup_c9f0a8eda90fa511ad3c94ae3c91571c.setContent(html_eb5faa01e256e5fa7abdb630bf2bde9d);
+            
+        
+
+        circle_marker_4d8741cf9faacf36d3c95e3ce3c725ab.bindPopup(popup_c9f0a8eda90fa511ad3c94ae3c91571c)
+        ;
+
+        
+    
+    
+            var circle_marker_91b083b3b4e1491f9e0b46cac72d20ee = L.circleMarker(
+                [-7.598234302932517, 110.95566854888118],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_b6f25f3449185735a0f2cc365e4a2eb3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cc1e2eebf178f6dab65f43c06f197f14 = $(`<div id="html_cc1e2eebf178f6dab65f43c06f197f14" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 22 (interval)<br>-<br>-7.5982343, 110.9556685<br>1969 m dari awal</div>`)[0];
+                popup_b6f25f3449185735a0f2cc365e4a2eb3.setContent(html_cc1e2eebf178f6dab65f43c06f197f14);
+            
+        
+
+        circle_marker_91b083b3b4e1491f9e0b46cac72d20ee.bindPopup(popup_b6f25f3449185735a0f2cc365e4a2eb3)
+        ;
+
+        
+    
+    
+            var circle_marker_f6587b22ea2bd412829b34840235ee2c = L.circleMarker(
+                [-7.598299585453154, 110.95659098378619],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_7a577dc6bacd2671e9e074ba06c4ec6e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_95197c4e226b64351f5794901a551944 = $(`<div id="html_95197c4e226b64351f5794901a551944" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 23 (interval)<br>-<br>-7.5982996, 110.9565910<br>2071 m dari awal</div>`)[0];
+                popup_7a577dc6bacd2671e9e074ba06c4ec6e.setContent(html_95197c4e226b64351f5794901a551944);
+            
+        
+
+        circle_marker_f6587b22ea2bd412829b34840235ee2c.bindPopup(popup_7a577dc6bacd2671e9e074ba06c4ec6e)
+        ;
+
+        
+    
+    
+            var circle_marker_eb27abeb914013a2fd0ca284fa9a0cb9 = L.circleMarker(
+                [-7.598413, 110.957508],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_381d1d463ae9af59f330f99c2373e503 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_52e3c06acb71c0034eb63e3b1e8de8e7 = $(`<div id="html_52e3c06acb71c0034eb63e3b1e8de8e7" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 24 (belokan)<br>Turn left.<br>-7.5984130, 110.9575080<br>2173 m dari awal</div>`)[0];
+                popup_381d1d463ae9af59f330f99c2373e503.setContent(html_52e3c06acb71c0034eb63e3b1e8de8e7);
+            
+        
+
+        circle_marker_eb27abeb914013a2fd0ca284fa9a0cb9.bindPopup(popup_381d1d463ae9af59f330f99c2373e503)
+        ;
+
+        
+    
+    
+            var circle_marker_60a6ca896a73c05704bd8f7743e225c2 = L.circleMarker(
+                [-7.597456, 110.957845],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_df12e929fec3079bfa02ace3c99522f6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d7b93e4fa6f017803eb19e9f8fa7b8eb = $(`<div id="html_d7b93e4fa6f017803eb19e9f8fa7b8eb" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 25 (belokan)<br>Turn right onto Jalan Cipto Mangun Kusumo.<br>-7.5974560, 110.9578450<br>2286 m dari awal</div>`)[0];
+                popup_df12e929fec3079bfa02ace3c99522f6.setContent(html_d7b93e4fa6f017803eb19e9f8fa7b8eb);
+            
+        
+
+        circle_marker_60a6ca896a73c05704bd8f7743e225c2.bindPopup(popup_df12e929fec3079bfa02ace3c99522f6)
+        ;
+
+        
+    
+    
+            var circle_marker_d85590dc52e439bcea5d42ba08d9379e = L.circleMarker(
+                [-7.597641, 110.958465],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_d5e15d28a71852f37288b2e1c961964b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_67d09a2bfcaf88a8ba4891f25b0de6d5 = $(`<div id="html_67d09a2bfcaf88a8ba4891f25b0de6d5" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 26 (belokan)<br>Turn left.<br>-7.5976410, 110.9584650<br>2357 m dari awal</div>`)[0];
+                popup_d5e15d28a71852f37288b2e1c961964b.setContent(html_67d09a2bfcaf88a8ba4891f25b0de6d5);
+            
+        
+
+        circle_marker_d85590dc52e439bcea5d42ba08d9379e.bindPopup(popup_d5e15d28a71852f37288b2e1c961964b)
+        ;
+
+        
+    
+    
+            var circle_marker_20f315bed9c1757ee7e18319d7e6327d = L.circleMarker(
+                [-7.596719350061922, 110.95880805049184],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_987a6aa571b2be6391bee1a672fac148 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0df37c814fd55ff40ac045fc36761322 = $(`<div id="html_0df37c814fd55ff40ac045fc36761322" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 27 (interval)<br>-<br>-7.5967194, 110.9588081<br>2466 m dari awal</div>`)[0];
+                popup_987a6aa571b2be6391bee1a672fac148.setContent(html_0df37c814fd55ff40ac045fc36761322);
+            
+        
+
+        circle_marker_20f315bed9c1757ee7e18319d7e6327d.bindPopup(popup_987a6aa571b2be6391bee1a672fac148)
+        ;
+
+        
+    
+    
+            var circle_marker_7caa5113669b28ae62f50e105ca48de7 = L.circleMarker(
+                [-7.595806, 110.959173],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_143b0acb884dddac226375b83599a683 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a0897b1d216d70a8b78e3f1ea558d28f = $(`<div id="html_a0897b1d216d70a8b78e3f1ea558d28f" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 28 (belokan)<br>Turn right.<br>-7.5958060, 110.9591730<br>2575 m dari awal</div>`)[0];
+                popup_143b0acb884dddac226375b83599a683.setContent(html_a0897b1d216d70a8b78e3f1ea558d28f);
+            
+        
+
+        circle_marker_7caa5113669b28ae62f50e105ca48de7.bindPopup(popup_143b0acb884dddac226375b83599a683)
+        ;
+
+        
+    
+    
+            var circle_marker_adb06ff83be6e589cd23ca153fb74583 = L.circleMarker(
+                [-7.595927, 110.959493],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_aed1b41cc81a86e6b17bfadd92359062 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b43ac39de40d5f12c9e636b3029f8c0e = $(`<div id="html_b43ac39de40d5f12c9e636b3029f8c0e" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 29 (belokan)<br>Turn right.<br>-7.5959270, 110.9594930<br>2613 m dari awal</div>`)[0];
+                popup_aed1b41cc81a86e6b17bfadd92359062.setContent(html_b43ac39de40d5f12c9e636b3029f8c0e);
+            
+        
+
+        circle_marker_adb06ff83be6e589cd23ca153fb74583.bindPopup(popup_aed1b41cc81a86e6b17bfadd92359062)
+        ;
+
+        
+    
+    
+            var circle_marker_0f0f08056817e1dc20edfde4ea70d7e2 = L.circleMarker(
+                [-7.596627, 110.959618],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a47e0", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_013c1274b477909dde7b187a258785f4);
+        
+    
+        var popup_bb34760baa1fe953315c8b29ead0bc2d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c9f70f2d6394274dcefa24907e8a59b4 = $(`<div id="html_c9f70f2d6394274dcefa24907e8a59b4" style="width: 100.0%; height: 100.0%;"><b>Rute 1</b> | node 30 (tujuan)<br>Tiba<br>-7.5966270, 110.9596180<br>2717 m dari awal</div>`)[0];
+                popup_bb34760baa1fe953315c8b29ead0bc2d.setContent(html_c9f70f2d6394274dcefa24907e8a59b4);
+            
+        
+
+        circle_marker_0f0f08056817e1dc20edfde4ea70d7e2.bindPopup(popup_bb34760baa1fe953315c8b29ead0bc2d)
+        ;
+
+        
+    
+    
+            feature_group_013c1274b477909dde7b187a258785f4.addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var feature_group_242405014b87a7c9aad7508da5f52ba1 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_8e2efea71403a716763ad5dd0234dc19 = L.polyline(
+                [[-7.595159, 110.939797], [-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.594606, 110.940695], [-7.594421, 110.940754], [-7.593973, 110.940897], [-7.593992, 110.940951], [-7.594095, 110.941253], [-7.594143, 110.941458], [-7.594287, 110.941906], [-7.594355, 110.942063], [-7.594406, 110.942207], [-7.594456, 110.942326], [-7.594504, 110.942444], [-7.594561, 110.942583], [-7.594649, 110.942835], [-7.594684, 110.942946], [-7.594834, 110.943418], [-7.594839, 110.943435], [-7.594871, 110.943538], [-7.594932, 110.943735], [-7.594777, 110.943785], [-7.594826, 110.943931], [-7.594881, 110.944165], [-7.595001, 110.944461], [-7.595082, 110.944702], [-7.595096, 110.944738], [-7.59517, 110.944959], [-7.595194, 110.945031], [-7.595247, 110.945192], [-7.595279, 110.945281], [-7.595359, 110.94551], [-7.595388, 110.945587], [-7.595419, 110.94568], [-7.595521, 110.945976], [-7.595572, 110.946124], [-7.595673, 110.946409], [-7.595772, 110.946699], [-7.595853, 110.946935], [-7.595924, 110.947201], [-7.595994, 110.94741], [-7.596164, 110.947825], [-7.596461, 110.94855], [-7.596537, 110.948734], [-7.596712, 110.949138], [-7.596894, 110.949596], [-7.597105, 110.950061], [-7.597203, 110.950279], [-7.597213, 110.9503], [-7.597224, 110.950324], [-7.597252, 110.950391], [-7.597369, 110.950669], [-7.597472, 110.9509], [-7.597488, 110.950936], [-7.597666, 110.951378], [-7.597682, 110.951414], [-7.597854, 110.951767], [-7.597931, 110.95194], [-7.597979, 110.952054], [-7.598149, 110.952451], [-7.598248, 110.952665], [-7.598276, 110.952798], [-7.598331, 110.952845], [-7.598252, 110.953195], [-7.598196, 110.953359], [-7.598146, 110.953562], [-7.598141, 110.953677], [-7.598144, 110.953724], [-7.598149, 110.953822], [-7.598173, 110.954133], [-7.5982, 110.95457], [-7.598262, 110.955148], [-7.598272, 110.955307], [-7.598327, 110.955831], [-7.59835, 110.956096], [-7.598362, 110.956201], [-7.598431, 110.956972], [-7.598466, 110.957358], [-7.598489, 110.957514], [-7.598544, 110.957724], [-7.598624, 110.95798], [-7.598734, 110.958238], [-7.59862, 110.95823], [-7.598567, 110.958221], [-7.598488, 110.958211], [-7.598392, 110.958199], [-7.598237, 110.958176], [-7.598022, 110.958146], [-7.597668, 110.958091], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 9}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+            var poly_line_7c7d35034b8a8b588161bdf1bc8e0aec = L.polyline(
+                [[-7.595159, 110.939797], [-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.594606, 110.940695], [-7.594421, 110.940754], [-7.593973, 110.940897], [-7.593992, 110.940951], [-7.594095, 110.941253], [-7.594143, 110.941458], [-7.594287, 110.941906], [-7.594355, 110.942063], [-7.594406, 110.942207], [-7.594456, 110.942326], [-7.594504, 110.942444], [-7.594561, 110.942583], [-7.594649, 110.942835], [-7.594684, 110.942946], [-7.594834, 110.943418], [-7.594839, 110.943435], [-7.594871, 110.943538], [-7.594932, 110.943735], [-7.594777, 110.943785], [-7.594826, 110.943931], [-7.594881, 110.944165], [-7.595001, 110.944461], [-7.595082, 110.944702], [-7.595096, 110.944738], [-7.59517, 110.944959], [-7.595194, 110.945031], [-7.595247, 110.945192], [-7.595279, 110.945281], [-7.595359, 110.94551], [-7.595388, 110.945587], [-7.595419, 110.94568], [-7.595521, 110.945976], [-7.595572, 110.946124], [-7.595673, 110.946409], [-7.595772, 110.946699], [-7.595853, 110.946935], [-7.595924, 110.947201], [-7.595994, 110.94741], [-7.596164, 110.947825], [-7.596461, 110.94855], [-7.596537, 110.948734], [-7.596712, 110.949138], [-7.596894, 110.949596], [-7.597105, 110.950061], [-7.597203, 110.950279], [-7.597213, 110.9503], [-7.597224, 110.950324], [-7.597252, 110.950391], [-7.597369, 110.950669], [-7.597472, 110.9509], [-7.597488, 110.950936], [-7.597666, 110.951378], [-7.597682, 110.951414], [-7.597854, 110.951767], [-7.597931, 110.95194], [-7.597979, 110.952054], [-7.598149, 110.952451], [-7.598248, 110.952665], [-7.598276, 110.952798], [-7.598331, 110.952845], [-7.598252, 110.953195], [-7.598196, 110.953359], [-7.598146, 110.953562], [-7.598141, 110.953677], [-7.598144, 110.953724], [-7.598149, 110.953822], [-7.598173, 110.954133], [-7.5982, 110.95457], [-7.598262, 110.955148], [-7.598272, 110.955307], [-7.598327, 110.955831], [-7.59835, 110.956096], [-7.598362, 110.956201], [-7.598431, 110.956972], [-7.598466, 110.957358], [-7.598489, 110.957514], [-7.598544, 110.957724], [-7.598624, 110.95798], [-7.598734, 110.958238], [-7.59862, 110.95823], [-7.598567, 110.958221], [-7.598488, 110.958211], [-7.598392, 110.958199], [-7.598237, 110.958176], [-7.598022, 110.958146], [-7.597668, 110.958091], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "#ff6d00", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#ff6d00", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+            poly_line_7c7d35034b8a8b588161bdf1bc8e0aec.bindTooltip(
+                `<div>
+                     Rute 2 | 2.81 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_065beecfe85e1f6ca8b098ea23dc2124 = L.circleMarker(
+                [-7.595159, 110.939797],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_668840b6b00aac425691335b5a72bdcb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_aad882b896edde70db186ea7f8fac706 = $(`<div id="html_aad882b896edde70db186ea7f8fac706" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 1 (asal)<br>Mulai<br>-7.5951590, 110.9397970<br>0 m dari awal</div>`)[0];
+                popup_668840b6b00aac425691335b5a72bdcb.setContent(html_aad882b896edde70db186ea7f8fac706);
+            
+        
+
+        circle_marker_065beecfe85e1f6ca8b098ea23dc2124.bindPopup(popup_668840b6b00aac425691335b5a72bdcb)
+        ;
+
+        
+    
+    
+            var circle_marker_47b6daae96de1e9c4ee6b1947a039e89 = L.circleMarker(
+                [-7.595342, 110.940462],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_d57513ecb73679969afbdb5094021698 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_22b45054d332ac8590849893ea8ec302 = $(`<div id="html_22b45054d332ac8590849893ea8ec302" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 2 (belokan)<br>Turn left.<br>-7.5953420, 110.9404620<br>76 m dari awal</div>`)[0];
+                popup_d57513ecb73679969afbdb5094021698.setContent(html_22b45054d332ac8590849893ea8ec302);
+            
+        
+
+        circle_marker_47b6daae96de1e9c4ee6b1947a039e89.bindPopup(popup_d57513ecb73679969afbdb5094021698)
+        ;
+
+        
+    
+    
+            var circle_marker_05c0c37a1afbfd66f6a4cc5d5e09a981 = L.circleMarker(
+                [-7.594657271552689, 110.94067876865248],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_89dc117a0e29053b64d9ea2617843521 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c36b271f3b555e27457fd95a4bca6de0 = $(`<div id="html_c36b271f3b555e27457fd95a4bca6de0" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 3 (interval)<br>-<br>-7.5946573, 110.9406788<br>156 m dari awal</div>`)[0];
+                popup_89dc117a0e29053b64d9ea2617843521.setContent(html_c36b271f3b555e27457fd95a4bca6de0);
+            
+        
+
+        circle_marker_05c0c37a1afbfd66f6a4cc5d5e09a981.bindPopup(popup_89dc117a0e29053b64d9ea2617843521)
+        ;
+
+        
+    
+    
+            var circle_marker_e966c003349a319bcc72068201dcab1b = L.circleMarker(
+                [-7.593973, 110.940897],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_92b8844e4367378822e47d81512f4771 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_55479e248e6ea744ae0fdc828d1b4743 = $(`<div id="html_55479e248e6ea744ae0fdc828d1b4743" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 4 (belokan)<br>Turn right.<br>-7.5939730, 110.9408970<br>236 m dari awal</div>`)[0];
+                popup_92b8844e4367378822e47d81512f4771.setContent(html_55479e248e6ea744ae0fdc828d1b4743);
+            
+        
+
+        circle_marker_e966c003349a319bcc72068201dcab1b.bindPopup(popup_92b8844e4367378822e47d81512f4771)
+        ;
+
+        
+    
+    
+            var circle_marker_bc40d4bbf54f0b6195e3bccbccf84e93 = L.circleMarker(
+                [-7.594269295751014, 110.94185092011426],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_d4310b6bf60d09768138252b7dc9a1d9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ea171d7c495901b13a8ad84d023c3092 = $(`<div id="html_ea171d7c495901b13a8ad84d023c3092" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 5 (interval)<br>-<br>-7.5942693, 110.9418509<br>346 m dari awal</div>`)[0];
+                popup_d4310b6bf60d09768138252b7dc9a1d9.setContent(html_ea171d7c495901b13a8ad84d023c3092);
+            
+        
+
+        circle_marker_bc40d4bbf54f0b6195e3bccbccf84e93.bindPopup(popup_d4310b6bf60d09768138252b7dc9a1d9)
+        ;
+
+        
+    
+    
+            var circle_marker_7f50503eb4dacbe0194a117e955b90ec = L.circleMarker(
+                [-7.594630497699369, 110.9427820161391],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_038376052147e7d99c9c5f8238ae7eb3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fed9c981f606f57959766085cd5c06b9 = $(`<div id="html_fed9c981f606f57959766085cd5c06b9" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 6 (interval)<br>-<br>-7.5946305, 110.9427820<br>456 m dari awal</div>`)[0];
+                popup_038376052147e7d99c9c5f8238ae7eb3.setContent(html_fed9c981f606f57959766085cd5c06b9);
+            
+        
+
+        circle_marker_7f50503eb4dacbe0194a117e955b90ec.bindPopup(popup_038376052147e7d99c9c5f8238ae7eb3)
+        ;
+
+        
+    
+    
+            var circle_marker_3518cf1ae1d23d50c6c2d56b3cf71c0d = L.circleMarker(
+                [-7.594932, 110.943735],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_9eafeb5d87af121e914e17c3ee356aa5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6f77225d6f192b17adeff09518a65834 = $(`<div id="html_6f77225d6f192b17adeff09518a65834" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 7 (belokan)<br>Turn left.<br>-7.5949320, 110.9437350<br>566 m dari awal</div>`)[0];
+                popup_9eafeb5d87af121e914e17c3ee356aa5.setContent(html_6f77225d6f192b17adeff09518a65834);
+            
+        
+
+        circle_marker_3518cf1ae1d23d50c6c2d56b3cf71c0d.bindPopup(popup_9eafeb5d87af121e914e17c3ee356aa5)
+        ;
+
+        
+    
+    
+            var circle_marker_e0e611e4d8a63596c9a8061386c2149d = L.circleMarker(
+                [-7.594777, 110.943785],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_af6277fd937aa80c09002fbb4c2fbad0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6816bb0a0f93146f83aef2f5e066fbdc = $(`<div id="html_6816bb0a0f93146f83aef2f5e066fbdc" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 8 (belokan)<br>Turn right onto Jalan Lawu.<br>-7.5947770, 110.9437850<br>585 m dari awal</div>`)[0];
+                popup_af6277fd937aa80c09002fbb4c2fbad0.setContent(html_6816bb0a0f93146f83aef2f5e066fbdc);
+            
+        
+
+        circle_marker_e0e611e4d8a63596c9a8061386c2149d.bindPopup(popup_af6277fd937aa80c09002fbb4c2fbad0)
+        ;
+
+        
+    
+    
+            var circle_marker_baaa555d7528a35f8a0b89e5d1d92ae8 = L.circleMarker(
+                [-7.595058990035353, 110.94463353825334],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_b0e6e9b9abf5fece8b4e7a83372290b8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_643d57d2b1fe80dc237b8307b51247a6 = $(`<div id="html_643d57d2b1fe80dc237b8307b51247a6" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 9 (interval)<br>-<br>-7.5950590, 110.9446335<br>683 m dari awal</div>`)[0];
+                popup_b0e6e9b9abf5fece8b4e7a83372290b8.setContent(html_643d57d2b1fe80dc237b8307b51247a6);
+            
+        
+
+        circle_marker_baaa555d7528a35f8a0b89e5d1d92ae8.bindPopup(popup_b0e6e9b9abf5fece8b4e7a83372290b8)
+        ;
+
+        
+    
+    
+            var circle_marker_609fd933abedcfc0462d74473d3f1e74 = L.circleMarker(
+                [-7.5953488843856585, 110.94548104405395],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_fe5c9f84d3e1dc6cfceb9158ac8fee2d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f3e6fe398e522e62377243eb1be072d2 = $(`<div id="html_f3e6fe398e522e62377243eb1be072d2" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 10 (interval)<br>-<br>-7.5953489, 110.9454810<br>782 m dari awal</div>`)[0];
+                popup_fe5c9f84d3e1dc6cfceb9158ac8fee2d.setContent(html_f3e6fe398e522e62377243eb1be072d2);
+            
+        
+
+        circle_marker_609fd933abedcfc0462d74473d3f1e74.bindPopup(popup_fe5c9f84d3e1dc6cfceb9158ac8fee2d)
+        ;
+
+        
+    
+    
+            var circle_marker_3995d43b99db77d154c84697ef6dd3c5 = L.circleMarker(
+                [-7.595643866669014, 110.94632679208583],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_7ad5c6988655850dc06ef2e51acbec45 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2ab9e04dd4a1e6d92764cdfdc4fb656d = $(`<div id="html_2ab9e04dd4a1e6d92764cdfdc4fb656d" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 11 (interval)<br>-<br>-7.5956439, 110.9463268<br>881 m dari awal</div>`)[0];
+                popup_7ad5c6988655850dc06ef2e51acbec45.setContent(html_2ab9e04dd4a1e6d92764cdfdc4fb656d);
+            
+        
+
+        circle_marker_3995d43b99db77d154c84697ef6dd3c5.bindPopup(popup_7ad5c6988655850dc06ef2e51acbec45)
+        ;
+
+        
+    
+    
+            var circle_marker_98a44b67b9d9d7b9bcddc933ee06df6f = L.circleMarker(
+                [-7.595918168886076, 110.94717915385488],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_6fef98aa5ce95df8315afa26f4cb3986 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9be2a80ffade0c50e38990513665d78b = $(`<div id="html_9be2a80ffade0c50e38990513665d78b" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 12 (interval)<br>-<br>-7.5959182, 110.9471792<br>980 m dari awal</div>`)[0];
+                popup_6fef98aa5ce95df8315afa26f4cb3986.setContent(html_9be2a80ffade0c50e38990513665d78b);
+            
+        
+
+        circle_marker_98a44b67b9d9d7b9bcddc933ee06df6f.bindPopup(popup_6fef98aa5ce95df8315afa26f4cb3986)
+        ;
+
+        
+    
+    
+            var circle_marker_963f4cfbdecb8cdcfc0e4b77cd63afe3 = L.circleMarker(
+                [-7.5962413641661115, 110.94801385192063],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_5f163af4eec2a264d946da81c96d0392 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b1ae5684296affcf9e770d4e67d13d32 = $(`<div id="html_b1ae5684296affcf9e770d4e67d13d32" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 13 (interval)<br>-<br>-7.5962414, 110.9480139<br>1079 m dari awal</div>`)[0];
+                popup_5f163af4eec2a264d946da81c96d0392.setContent(html_b1ae5684296affcf9e770d4e67d13d32);
+            
+        
+
+        circle_marker_963f4cfbdecb8cdcfc0e4b77cd63afe3.bindPopup(popup_5f163af4eec2a264d946da81c96d0392)
+        ;
+
+        
+    
+    
+            var circle_marker_45029f3ce474c5049f6c50d4e4121ba1 = L.circleMarker(
+                [-7.59658350071601, 110.9488413502244],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_8d05778f65c39709b36472158cc54c58 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3180231fa1faac7d0cc5518d411f505a = $(`<div id="html_3180231fa1faac7d0cc5518d411f505a" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 14 (interval)<br>-<br>-7.5965835, 110.9488414<br>1177 m dari awal</div>`)[0];
+                popup_8d05778f65c39709b36472158cc54c58.setContent(html_3180231fa1faac7d0cc5518d411f505a);
+            
+        
+
+        circle_marker_45029f3ce474c5049f6c50d4e4121ba1.bindPopup(popup_8d05778f65c39709b36472158cc54c58)
+        ;
+
+        
+    
+    
+            var circle_marker_3a21a2a525c1fce4205e085406fdac50 = L.circleMarker(
+                [-7.596926779254702, 110.94966823864188],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_2a3ba0c66a2b14e4d14d8cbaa61200dc = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_49daaeb81847a51983dc9deef6515f3b = $(`<div id="html_49daaeb81847a51983dc9deef6515f3b" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 15 (interval)<br>-<br>-7.5969268, 110.9496682<br>1276 m dari awal</div>`)[0];
+                popup_2a3ba0c66a2b14e4d14d8cbaa61200dc.setContent(html_49daaeb81847a51983dc9deef6515f3b);
+            
+        
+
+        circle_marker_3a21a2a525c1fce4205e085406fdac50.bindPopup(popup_2a3ba0c66a2b14e4d14d8cbaa61200dc)
+        ;
+
+        
+    
+    
+            var circle_marker_ba64f2ab1a052f6e26a0bc9c759497b4 = L.circleMarker(
+                [-7.597291839228874, 110.95048566073186],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_1abc9837e3e5558e28293cf1dff38f14 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e4f49cefaf53f3e3a5d058212c0a4b23 = $(`<div id="html_e4f49cefaf53f3e3a5d058212c0a4b23" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 16 (interval)<br>-<br>-7.5972918, 110.9504857<br>1375 m dari awal</div>`)[0];
+                popup_1abc9837e3e5558e28293cf1dff38f14.setContent(html_e4f49cefaf53f3e3a5d058212c0a4b23);
+            
+        
+
+        circle_marker_ba64f2ab1a052f6e26a0bc9c759497b4.bindPopup(popup_1abc9837e3e5558e28293cf1dff38f14)
+        ;
+
+        
+    
+    
+            var circle_marker_c62a160176d4d5a16125f1b10bbb0214 = L.circleMarker(
+                [-7.5976389900309, 110.95131093030145],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_2cedc766f099d113d9080f88526c3096 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e4cf278bc41b849986b7b1d946317485 = $(`<div id="html_e4cf278bc41b849986b7b1d946317485" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 17 (interval)<br>-<br>-7.5976390, 110.9513109<br>1474 m dari awal</div>`)[0];
+                popup_2cedc766f099d113d9080f88526c3096.setContent(html_e4cf278bc41b849986b7b1d946317485);
+            
+        
+
+        circle_marker_c62a160176d4d5a16125f1b10bbb0214.bindPopup(popup_2cedc766f099d113d9080f88526c3096)
+        ;
+
+        
+    
+    
+            var circle_marker_cd4509c58add62bc987bd5e935e4add0 = L.circleMarker(
+                [-7.59800963546224, 110.95212554281477],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_1a0c520fefe6d47e7125f1ed119d373c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_671b792751c653b77f11404a4b216650 = $(`<div id="html_671b792751c653b77f11404a4b216650" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 18 (interval)<br>-<br>-7.5980096, 110.9521255<br>1573 m dari awal</div>`)[0];
+                popup_1a0c520fefe6d47e7125f1ed119d373c.setContent(html_671b792751c653b77f11404a4b216650);
+            
+        
+
+        circle_marker_cd4509c58add62bc987bd5e935e4add0.bindPopup(popup_1a0c520fefe6d47e7125f1ed119d373c)
+        ;
+
+        
+    
+    
+            var circle_marker_a6c191bb9e1d061971853c7f03ba52be = L.circleMarker(
+                [-7.598309596800094, 110.95293982430337],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_9a8ae457720d2629c0e713600eed195f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cf8fda414f6fc1c20a114b5820b58acc = $(`<div id="html_cf8fda414f6fc1c20a114b5820b58acc" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 19 (interval)<br>-<br>-7.5983096, 110.9529398<br>1672 m dari awal</div>`)[0];
+                popup_9a8ae457720d2629c0e713600eed195f.setContent(html_cf8fda414f6fc1c20a114b5820b58acc);
+            
+        
+
+        circle_marker_a6c191bb9e1d061971853c7f03ba52be.bindPopup(popup_9a8ae457720d2629c0e713600eed195f)
+        ;
+
+        
+    
+    
+            var circle_marker_e967ba7ca3d706a71467797716686620 = L.circleMarker(
+                [-7.5981485896688215, 110.9538139575089],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_c24be89cb1269734b198baf7f015fa5b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b360ce6d57d8791b9a50c17a20fd49f2 = $(`<div id="html_b360ce6d57d8791b9a50c17a20fd49f2" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 20 (interval)<br>-<br>-7.5981486, 110.9538140<br>1770 m dari awal</div>`)[0];
+                popup_c24be89cb1269734b198baf7f015fa5b.setContent(html_b360ce6d57d8791b9a50c17a20fd49f2);
+            
+        
+
+        circle_marker_e967ba7ca3d706a71467797716686620.bindPopup(popup_c24be89cb1269734b198baf7f015fa5b)
+        ;
+
+        
+    
+    
+            var circle_marker_f03ecc355561418ba7c6d90891014856 = L.circleMarker(
+                [-7.598214800218738, 110.95470797623274],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_4597bbc5cfcfbf7cd8bcf321ce706b53 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_eda4c3d497343cdab4f79b0ed029ecec = $(`<div id="html_eda4c3d497343cdab4f79b0ed029ecec" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 21 (interval)<br>-<br>-7.5982148, 110.9547080<br>1869 m dari awal</div>`)[0];
+                popup_4597bbc5cfcfbf7cd8bcf321ce706b53.setContent(html_eda4c3d497343cdab4f79b0ed029ecec);
+            
+        
+
+        circle_marker_f03ecc355561418ba7c6d90891014856.bindPopup(popup_4597bbc5cfcfbf7cd8bcf321ce706b53)
+        ;
+
+        
+    
+    
+            var circle_marker_9be00aa6222dee70324f9c1c07880cd5 = L.circleMarker(
+                [-7.598302761503188, 110.95560007323037],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_c023fade2d0576521660c9ee74a49222 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d4ae3c4c2405a08f40d03c3d78d92363 = $(`<div id="html_d4ae3c4c2405a08f40d03c3d78d92363" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 22 (interval)<br>-<br>-7.5983028, 110.9556001<br>1968 m dari awal</div>`)[0];
+                popup_c023fade2d0576521660c9ee74a49222.setContent(html_d4ae3c4c2405a08f40d03c3d78d92363);
+            
+        
+
+        circle_marker_9be00aa6222dee70324f9c1c07880cd5.bindPopup(popup_c023fade2d0576521660c9ee74a49222)
+        ;
+
+        
+    
+    
+            var circle_marker_07af70e0bf9da1b1bc39c9e0032aef9c = L.circleMarker(
+                [-7.598388088563025, 110.95649251133467],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_d53e5c3c0c91421d0c35e9d02845db0e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9cadd93d31a8c6a9f97526fec9ae2610 = $(`<div id="html_9cadd93d31a8c6a9f97526fec9ae2610" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 23 (interval)<br>-<br>-7.5983881, 110.9564925<br>2067 m dari awal</div>`)[0];
+                popup_d53e5c3c0c91421d0c35e9d02845db0e.setContent(html_9cadd93d31a8c6a9f97526fec9ae2610);
+            
+        
+
+        circle_marker_07af70e0bf9da1b1bc39c9e0032aef9c.bindPopup(popup_d53e5c3c0c91421d0c35e9d02845db0e)
+        ;
+
+        
+    
+    
+            var circle_marker_06addcc47a4c53002f31170a585a3d83 = L.circleMarker(
+                [-7.598470021150548, 110.95738527389068],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_c1dfa5043f82d7520116a93b67f72922 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_386e615388d0ce8fa36edc5a395e5874 = $(`<div id="html_386e615388d0ce8fa36edc5a395e5874" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 24 (interval)<br>-<br>-7.5984700, 110.9573853<br>2166 m dari awal</div>`)[0];
+                popup_c1dfa5043f82d7520116a93b67f72922.setContent(html_386e615388d0ce8fa36edc5a395e5874);
+            
+        
+
+        circle_marker_06addcc47a4c53002f31170a585a3d83.bindPopup(popup_c1dfa5043f82d7520116a93b67f72922)
+        ;
+
+        
+    
+    
+            var circle_marker_8c2099d4937805a4415f2dce84f41b33 = L.circleMarker(
+                [-7.598734, 110.958238],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_c785bc69b5f29ba7bcd9f4d5b68ca931 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bfc06f2901a072a57a7585e678fcc8dd = $(`<div id="html_bfc06f2901a072a57a7585e678fcc8dd" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 25 (belokan)<br>Turn left onto Jalan Tentara Pelajar.<br>-7.5987340, 110.9582380<br>2265 m dari awal</div>`)[0];
+                popup_c785bc69b5f29ba7bcd9f4d5b68ca931.setContent(html_bfc06f2901a072a57a7585e678fcc8dd);
+            
+        
+
+        circle_marker_8c2099d4937805a4415f2dce84f41b33.bindPopup(popup_c785bc69b5f29ba7bcd9f4d5b68ca931)
+        ;
+
+        
+    
+    
+            var circle_marker_f12706f4abace024530c6482b3b38aac = L.circleMarker(
+                [-7.597521, 110.958056],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_ebfb3a0a0257614abffecff98c78955b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4eec9c99627ac30b90f977437091be9f = $(`<div id="html_4eec9c99627ac30b90f977437091be9f" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 26 (belokan)<br>Turn right onto Jalan Cipto Mangun Kusumo.<br>-7.5975210, 110.9580560<br>2401 m dari awal</div>`)[0];
+                popup_ebfb3a0a0257614abffecff98c78955b.setContent(html_4eec9c99627ac30b90f977437091be9f);
+            
+        
+
+        circle_marker_f12706f4abace024530c6482b3b38aac.bindPopup(popup_ebfb3a0a0257614abffecff98c78955b)
+        ;
+
+        
+    
+    
+            var circle_marker_8c7c1373a7c116275e523b805ede626e = L.circleMarker(
+                [-7.597641, 110.958465],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_b88e7ca318b1d647ec36c607184ea8f3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f00738c5cd1eaee619a1e0e5f4f22ab7 = $(`<div id="html_f00738c5cd1eaee619a1e0e5f4f22ab7" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 27 (belokan)<br>Turn left.<br>-7.5976410, 110.9584650<br>2448 m dari awal</div>`)[0];
+                popup_b88e7ca318b1d647ec36c607184ea8f3.setContent(html_f00738c5cd1eaee619a1e0e5f4f22ab7);
+            
+        
+
+        circle_marker_8c7c1373a7c116275e523b805ede626e.bindPopup(popup_b88e7ca318b1d647ec36c607184ea8f3)
+        ;
+
+        
+    
+    
+            var circle_marker_58dd6566396c702cc84b3634c629a94c = L.circleMarker(
+                [-7.596719350061922, 110.95880805049184],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_e87b21327e553d4f85a75a8575d8f819 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bd2c03ef69277f6d4943203d59500de3 = $(`<div id="html_bd2c03ef69277f6d4943203d59500de3" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 28 (interval)<br>-<br>-7.5967194, 110.9588081<br>2557 m dari awal</div>`)[0];
+                popup_e87b21327e553d4f85a75a8575d8f819.setContent(html_bd2c03ef69277f6d4943203d59500de3);
+            
+        
+
+        circle_marker_58dd6566396c702cc84b3634c629a94c.bindPopup(popup_e87b21327e553d4f85a75a8575d8f819)
+        ;
+
+        
+    
+    
+            var circle_marker_494957d9a4599c9fa72bd986e871c8fb = L.circleMarker(
+                [-7.595806, 110.959173],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_943f226ff4072d0624b7dbb4991efdef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_520b14b26bc727a76b4d1aaa75edf946 = $(`<div id="html_520b14b26bc727a76b4d1aaa75edf946" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 29 (belokan)<br>Turn right.<br>-7.5958060, 110.9591730<br>2667 m dari awal</div>`)[0];
+                popup_943f226ff4072d0624b7dbb4991efdef.setContent(html_520b14b26bc727a76b4d1aaa75edf946);
+            
+        
+
+        circle_marker_494957d9a4599c9fa72bd986e871c8fb.bindPopup(popup_943f226ff4072d0624b7dbb4991efdef)
+        ;
+
+        
+    
+    
+            var circle_marker_058eb3aa857f1f5e35f8de7d4f009364 = L.circleMarker(
+                [-7.595927, 110.959493],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_002e9dca35338ada37f7e29e6447b746 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0d5840642b73472bc3644a7e66e739ae = $(`<div id="html_0d5840642b73472bc3644a7e66e739ae" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 30 (belokan)<br>Turn right.<br>-7.5959270, 110.9594930<br>2704 m dari awal</div>`)[0];
+                popup_002e9dca35338ada37f7e29e6447b746.setContent(html_0d5840642b73472bc3644a7e66e739ae);
+            
+        
+
+        circle_marker_058eb3aa857f1f5e35f8de7d4f009364.bindPopup(popup_002e9dca35338ada37f7e29e6447b746)
+        ;
+
+        
+    
+    
+            var circle_marker_370e03bf0221178aaaa75bb332381aff = L.circleMarker(
+                [-7.596627, 110.959618],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6d00", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_242405014b87a7c9aad7508da5f52ba1);
+        
+    
+        var popup_28ea6600e86870d9da0bee17279a2c2b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7c888316344372e92dad7c524bed0d0a = $(`<div id="html_7c888316344372e92dad7c524bed0d0a" style="width: 100.0%; height: 100.0%;"><b>Rute 2</b> | node 31 (tujuan)<br>Tiba<br>-7.5966270, 110.9596180<br>2808 m dari awal</div>`)[0];
+                popup_28ea6600e86870d9da0bee17279a2c2b.setContent(html_7c888316344372e92dad7c524bed0d0a);
+            
+        
+
+        circle_marker_370e03bf0221178aaaa75bb332381aff.bindPopup(popup_28ea6600e86870d9da0bee17279a2c2b)
+        ;
+
+        
+    
+    
+            feature_group_242405014b87a7c9aad7508da5f52ba1.addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var feature_group_26ba775446c3946bd5ac9f4999851277 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_b87523370c8911e005fe405e8a2e63bf = L.polyline(
+                [[-7.595159, 110.939797], [-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.595451, 110.940424], [-7.596458, 110.940098], [-7.596472, 110.94015], [-7.596535, 110.940379], [-7.59662, 110.940693], [-7.596788, 110.941296], [-7.596795, 110.941344], [-7.596824, 110.941521], [-7.596884, 110.941922], [-7.59694, 110.942287], [-7.597001, 110.942638], [-7.597066, 110.943008], [-7.597095, 110.9431], [-7.597109, 110.943155], [-7.597171, 110.943353], [-7.59726, 110.943684], [-7.597293, 110.943822], [-7.597342, 110.943994], [-7.597409, 110.94421], [-7.597487, 110.944401], [-7.597588, 110.944698], [-7.597707, 110.945085], [-7.597745, 110.945203], [-7.597782, 110.945336], [-7.597843, 110.945573], [-7.597888, 110.94575], [-7.59797, 110.946141], [-7.597985, 110.946217], [-7.598135, 110.947003], [-7.598157, 110.947214], [-7.598168, 110.947313], [-7.598188, 110.947355], [-7.598291, 110.947669], [-7.598341, 110.947833], [-7.598377, 110.947937], [-7.598403, 110.948052], [-7.59841, 110.948135], [-7.59842, 110.948215], [-7.598448, 110.948548], [-7.598519, 110.94923], [-7.598536, 110.949345], [-7.598572, 110.949678], [-7.598592, 110.949892], [-7.598608, 110.949961], [-7.598641, 110.950138], [-7.598734, 110.95049], [-7.598861, 110.950938], [-7.598956, 110.951414], [-7.599167, 110.952572], [-7.599016, 110.952599], [-7.598887, 110.95263], [-7.598755, 110.952669], [-7.598733, 110.952675], [-7.598559, 110.952724], [-7.598405, 110.95277], [-7.598362, 110.952801], [-7.598331, 110.952845], [-7.598276, 110.952798], [-7.598203, 110.953158], [-7.598148, 110.953314], [-7.598115, 110.953442], [-7.598103, 110.953492], [-7.598077, 110.953741], [-7.598113, 110.954241], [-7.598136, 110.954517], [-7.598164, 110.954897], [-7.598178, 110.955048], [-7.598225, 110.955454], [-7.598241, 110.955823], [-7.59827, 110.956268], [-7.598286, 110.95644], [-7.59833, 110.956929], [-7.598343, 110.957045], [-7.598374, 110.957315], [-7.598401, 110.95745], [-7.598413, 110.957508], [-7.598287, 110.957543], [-7.597763, 110.957732], [-7.597565, 110.957816], [-7.597456, 110.957845], [-7.597472, 110.957897], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "white", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 9}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+            var poly_line_d8bac091e544ac0d956632cd0e8c9a1e = L.polyline(
+                [[-7.595159, 110.939797], [-7.595159, 110.939797], [-7.595164, 110.939812], [-7.595228, 110.940053], [-7.595342, 110.940462], [-7.595451, 110.940424], [-7.596458, 110.940098], [-7.596472, 110.94015], [-7.596535, 110.940379], [-7.59662, 110.940693], [-7.596788, 110.941296], [-7.596795, 110.941344], [-7.596824, 110.941521], [-7.596884, 110.941922], [-7.59694, 110.942287], [-7.597001, 110.942638], [-7.597066, 110.943008], [-7.597095, 110.9431], [-7.597109, 110.943155], [-7.597171, 110.943353], [-7.59726, 110.943684], [-7.597293, 110.943822], [-7.597342, 110.943994], [-7.597409, 110.94421], [-7.597487, 110.944401], [-7.597588, 110.944698], [-7.597707, 110.945085], [-7.597745, 110.945203], [-7.597782, 110.945336], [-7.597843, 110.945573], [-7.597888, 110.94575], [-7.59797, 110.946141], [-7.597985, 110.946217], [-7.598135, 110.947003], [-7.598157, 110.947214], [-7.598168, 110.947313], [-7.598188, 110.947355], [-7.598291, 110.947669], [-7.598341, 110.947833], [-7.598377, 110.947937], [-7.598403, 110.948052], [-7.59841, 110.948135], [-7.59842, 110.948215], [-7.598448, 110.948548], [-7.598519, 110.94923], [-7.598536, 110.949345], [-7.598572, 110.949678], [-7.598592, 110.949892], [-7.598608, 110.949961], [-7.598641, 110.950138], [-7.598734, 110.95049], [-7.598861, 110.950938], [-7.598956, 110.951414], [-7.599167, 110.952572], [-7.599016, 110.952599], [-7.598887, 110.95263], [-7.598755, 110.952669], [-7.598733, 110.952675], [-7.598559, 110.952724], [-7.598405, 110.95277], [-7.598362, 110.952801], [-7.598331, 110.952845], [-7.598276, 110.952798], [-7.598203, 110.953158], [-7.598148, 110.953314], [-7.598115, 110.953442], [-7.598103, 110.953492], [-7.598077, 110.953741], [-7.598113, 110.954241], [-7.598136, 110.954517], [-7.598164, 110.954897], [-7.598178, 110.955048], [-7.598225, 110.955454], [-7.598241, 110.955823], [-7.59827, 110.956268], [-7.598286, 110.95644], [-7.59833, 110.956929], [-7.598343, 110.957045], [-7.598374, 110.957315], [-7.598401, 110.95745], [-7.598413, 110.957508], [-7.598287, 110.957543], [-7.597763, 110.957732], [-7.597565, 110.957816], [-7.597456, 110.957845], [-7.597472, 110.957897], [-7.597521, 110.958056], [-7.597641, 110.958465], [-7.596727, 110.958805], [-7.596243, 110.958998], [-7.595806, 110.959173], [-7.595892, 110.959396], [-7.595927, 110.959493], [-7.596456, 110.959318], [-7.596499, 110.95932], [-7.596533, 110.959339], [-7.59662, 110.959597], [-7.596627, 110.959618], [-7.596627, 110.959618]],
+                {"bubblingMouseEvents": true, "color": "#d500f9", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#d500f9", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+            poly_line_d8bac091e544ac0d956632cd0e8c9a1e.bindTooltip(
+                `<div>
+                     Rute 3 | 2.79 km
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c17afd42d3f9146510069ddb3231f13c = L.circleMarker(
+                [-7.595159, 110.939797],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_a3295e03da6dffb780354f67a5898cd3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b634c688cc1fc26c12a5ce060707bbea = $(`<div id="html_b634c688cc1fc26c12a5ce060707bbea" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 1 (asal)<br>Mulai<br>-7.5951590, 110.9397970<br>0 m dari awal</div>`)[0];
+                popup_a3295e03da6dffb780354f67a5898cd3.setContent(html_b634c688cc1fc26c12a5ce060707bbea);
+            
+        
+
+        circle_marker_c17afd42d3f9146510069ddb3231f13c.bindPopup(popup_a3295e03da6dffb780354f67a5898cd3)
+        ;
+
+        
+    
+    
+            var circle_marker_e07c0cd4a9b65654b7bac5589bf26ec7 = L.circleMarker(
+                [-7.595342, 110.940462],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_c871b73f4e1b6a08ac28c62a5b500526 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6e9275023fe67f8e4bab59683851f8c8 = $(`<div id="html_6e9275023fe67f8e4bab59683851f8c8" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 2 (belokan)<br>Turn right.<br>-7.5953420, 110.9404620<br>76 m dari awal</div>`)[0];
+                popup_c871b73f4e1b6a08ac28c62a5b500526.setContent(html_6e9275023fe67f8e4bab59683851f8c8);
+            
+        
+
+        circle_marker_e07c0cd4a9b65654b7bac5589bf26ec7.bindPopup(popup_c871b73f4e1b6a08ac28c62a5b500526)
+        ;
+
+        
+    
+    
+            var circle_marker_7ebba6b5b0e0ba1f8181e07cf8d130ce = L.circleMarker(
+                [-7.596458, 110.940098],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_416811a63b505f44254ad603d16d9006 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b08ba551f26fa819b224f12d332d556c = $(`<div id="html_b08ba551f26fa819b224f12d332d556c" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 3 (belokan)<br>Turn left.<br>-7.5964580, 110.9400980<br>206 m dari awal</div>`)[0];
+                popup_416811a63b505f44254ad603d16d9006.setContent(html_b08ba551f26fa819b224f12d332d556c);
+            
+        
+
+        circle_marker_7ebba6b5b0e0ba1f8181e07cf8d130ce.bindPopup(popup_416811a63b505f44254ad603d16d9006)
+        ;
+
+        
+    
+    
+            var circle_marker_4387a4870dd2015def11cda495ef2ec2 = L.circleMarker(
+                [-7.5967344859499715, 110.94110392278472],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_3263408779d39bf73a436440d352af61 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_40eec0ab24fac221b2d63e57498bd66b = $(`<div id="html_40eec0ab24fac221b2d63e57498bd66b" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 4 (interval)<br>-<br>-7.5967345, 110.9411039<br>322 m dari awal</div>`)[0];
+                popup_3263408779d39bf73a436440d352af61.setContent(html_40eec0ab24fac221b2d63e57498bd66b);
+            
+        
+
+        circle_marker_4387a4870dd2015def11cda495ef2ec2.bindPopup(popup_3263408779d39bf73a436440d352af61)
+        ;
+
+        
+    
+    
+            var circle_marker_91af215c93cd39e1031303e0c72efc23 = L.circleMarker(
+                [-7.596915977170158, 110.94213042262692],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_e1a63075e8ecf58aeea6b86f5e91e60e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_97ba7ce2aa5cff6bb68cac82180e19cd = $(`<div id="html_97ba7ce2aa5cff6bb68cac82180e19cd" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 5 (interval)<br>-<br>-7.5969160, 110.9421304<br>437 m dari awal</div>`)[0];
+                popup_e1a63075e8ecf58aeea6b86f5e91e60e.setContent(html_97ba7ce2aa5cff6bb68cac82180e19cd);
+            
+        
+
+        circle_marker_91af215c93cd39e1031303e0c72efc23.bindPopup(popup_e1a63075e8ecf58aeea6b86f5e91e60e)
+        ;
+
+        
+    
+    
+            var circle_marker_6b34b521da44545763b2f5b30e12f0f4 = L.circleMarker(
+                [-7.597109, 110.943155],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_4ff5f268569cfb54c7b64e5229f2963c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_61665e8626a05968834628ac0d96ddd3 = $(`<div id="html_61665e8626a05968834628ac0d96ddd3" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 6 (belokan)<br>Keep right at the fork.<br>-7.5971090, 110.9431550<br>552 m dari awal</div>`)[0];
+                popup_4ff5f268569cfb54c7b64e5229f2963c.setContent(html_61665e8626a05968834628ac0d96ddd3);
+            
+        
+
+        circle_marker_6b34b521da44545763b2f5b30e12f0f4.bindPopup(popup_4ff5f268569cfb54c7b64e5229f2963c)
+        ;
+
+        
+    
+    
+            var circle_marker_3c85acc85275669f8a4913b1d8d8a2a2 = L.circleMarker(
+                [-7.597344347615035, 110.94400156843056],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_f7325571273bdd487ef72e5098b6942e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6edb2baa75f55a40f6f528eb093054b0 = $(`<div id="html_6edb2baa75f55a40f6f528eb093054b0" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 7 (interval)<br>-<br>-7.5973443, 110.9440016<br>649 m dari awal</div>`)[0];
+                popup_f7325571273bdd487ef72e5098b6942e.setContent(html_6edb2baa75f55a40f6f528eb093054b0);
+            
+        
+
+        circle_marker_3c85acc85275669f8a4913b1d8d8a2a2.bindPopup(popup_f7325571273bdd487ef72e5098b6942e)
+        ;
+
+        
+    
+    
+            var circle_marker_196b0f10e9340375d2dde1a96f440e8c = L.circleMarker(
+                [-7.597629260941275, 110.9448321847418],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_cc4cb7a71c933d03b3f0cd45b8cd71a1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_13467e44e5024f2a95440a319afa572d = $(`<div id="html_13467e44e5024f2a95440a319afa572d" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 8 (interval)<br>-<br>-7.5976293, 110.9448322<br>746 m dari awal</div>`)[0];
+                popup_cc4cb7a71c933d03b3f0cd45b8cd71a1.setContent(html_13467e44e5024f2a95440a319afa572d);
+            
+        
+
+        circle_marker_196b0f10e9340375d2dde1a96f440e8c.bindPopup(popup_cc4cb7a71c933d03b3f0cd45b8cd71a1)
+        ;
+
+        
+    
+    
+            var circle_marker_4565ec4d347be8928642e61b3f87ee98 = L.circleMarker(
+                [-7.597869520296624, 110.94567731316671],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_66a03e5e587fb452b0ea82dc5907e537 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0a0748a015ce9542e2a8dfafb540e73b = $(`<div id="html_0a0748a015ce9542e2a8dfafb540e73b" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 9 (interval)<br>-<br>-7.5978695, 110.9456773<br>842 m dari awal</div>`)[0];
+                popup_66a03e5e587fb452b0ea82dc5907e537.setContent(html_0a0748a015ce9542e2a8dfafb540e73b);
+            
+        
+
+        circle_marker_4565ec4d347be8928642e61b3f87ee98.bindPopup(popup_66a03e5e587fb452b0ea82dc5907e537)
+        ;
+
+        
+    
+    
+            var circle_marker_b156f6b3247df7867014d073fd426adc = L.circleMarker(
+                [-7.598046330399401, 110.94653837129286],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_de4e5952e9071e7ae91fc81de60f189b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c0f3c0f35ddf6015fb23ecbf471e1f8e = $(`<div id="html_c0f3c0f35ddf6015fb23ecbf471e1f8e" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 10 (interval)<br>-<br>-7.5980463, 110.9465384<br>939 m dari awal</div>`)[0];
+                popup_de4e5952e9071e7ae91fc81de60f189b.setContent(html_c0f3c0f35ddf6015fb23ecbf471e1f8e);
+            
+        
+
+        circle_marker_b156f6b3247df7867014d073fd426adc.bindPopup(popup_de4e5952e9071e7ae91fc81de60f189b)
+        ;
+
+        
+    
+    
+            var circle_marker_43457191b2a1867e3d7af583ee32cbc7 = L.circleMarker(
+                [-7.598202922978029, 110.9474004933505],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_c8bfaf599b13c8fdfc1fb8c28d834bd0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_811787564dcf4814869152a1369a7786 = $(`<div id="html_811787564dcf4814869152a1369a7786" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 11 (interval)<br>-<br>-7.5982029, 110.9474005<br>1036 m dari awal</div>`)[0];
+                popup_c8bfaf599b13c8fdfc1fb8c28d834bd0.setContent(html_811787564dcf4814869152a1369a7786);
+            
+        
+
+        circle_marker_43457191b2a1867e3d7af583ee32cbc7.bindPopup(popup_c8bfaf599b13c8fdfc1fb8c28d834bd0)
+        ;
+
+        
+    
+    
+            var circle_marker_03e1fbd860a420d01f75ac601c6ffa0f = L.circleMarker(
+                [-7.598422765282924, 110.94824788711477],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_9bfaefa877609ad45587efe868dc48e9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c7cb706eabb770832fd202e89200dbcf = $(`<div id="html_c7cb706eabb770832fd202e89200dbcf" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 12 (interval)<br>-<br>-7.5984228, 110.9482479<br>1133 m dari awal</div>`)[0];
+                popup_9bfaefa877609ad45587efe868dc48e9.setContent(html_c7cb706eabb770832fd202e89200dbcf);
+            
+        
+
+        circle_marker_03e1fbd860a420d01f75ac601c6ffa0f.bindPopup(popup_9bfaefa877609ad45587efe868dc48e9)
+        ;
+
+        
+    
+    
+            var circle_marker_70832b212b8b81712c9a62f65261a10c = L.circleMarker(
+                [-7.598507871909582, 110.94912310763853],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_6a8735ec00bf754d377e72418e474435 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5b0d5bbcf1412aa253cc37f2bea630fb = $(`<div id="html_5b0d5bbcf1412aa253cc37f2bea630fb" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 13 (interval)<br>-<br>-7.5985079, 110.9491231<br>1230 m dari awal</div>`)[0];
+                popup_6a8735ec00bf754d377e72418e474435.setContent(html_5b0d5bbcf1412aa253cc37f2bea630fb);
+            
+        
+
+        circle_marker_70832b212b8b81712c9a62f65261a10c.bindPopup(popup_6a8735ec00bf754d377e72418e474435)
+        ;
+
+        
+    
+    
+            var circle_marker_f7dbbc23ada7d7d8ac9816bfa26a5bed = L.circleMarker(
+                [-7.598614398843916, 110.94999532107191],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_a0411c456446968ea118977c93bb215d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d89bd7247e3adcce9c84d68fbfed3857 = $(`<div id="html_d89bd7247e3adcce9c84d68fbfed3857" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 14 (interval)<br>-<br>-7.5986144, 110.9499953<br>1327 m dari awal</div>`)[0];
+                popup_a0411c456446968ea118977c93bb215d.setContent(html_d89bd7247e3adcce9c84d68fbfed3857);
+            
+        
+
+        circle_marker_f7dbbc23ada7d7d8ac9816bfa26a5bed.bindPopup(popup_a0411c456446968ea118977c93bb215d)
+        ;
+
+        
+    
+    
+            var circle_marker_18afb88f82c39db288fbb6faa9570d5e = L.circleMarker(
+                [-7.598834842984605, 110.95084572958348],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_b9d5477d6686743a4b152bc59ad25d94 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_46d97a6664bf8338a1c5be3615e28b11 = $(`<div id="html_46d97a6664bf8338a1c5be3615e28b11" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 15 (interval)<br>-<br>-7.5988348, 110.9508457<br>1424 m dari awal</div>`)[0];
+                popup_b9d5477d6686743a4b152bc59ad25d94.setContent(html_46d97a6664bf8338a1c5be3615e28b11);
+            
+        
+
+        circle_marker_18afb88f82c39db288fbb6faa9570d5e.bindPopup(popup_b9d5477d6686743a4b152bc59ad25d94)
+        ;
+
+        
+    
+    
+            var circle_marker_703113c9fb40ca915e185e19e6856ce6 = L.circleMarker(
+                [-7.599009393222895, 110.9517070301048],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_e2c6e4d0d0412787539ba0529661822e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f937b178c8348a6147fe71ac727f5dd9 = $(`<div id="html_f937b178c8348a6147fe71ac727f5dd9" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 16 (interval)<br>-<br>-7.5990094, 110.9517070<br>1521 m dari awal</div>`)[0];
+                popup_e2c6e4d0d0412787539ba0529661822e.setContent(html_f937b178c8348a6147fe71ac727f5dd9);
+            
+        
+
+        circle_marker_703113c9fb40ca915e185e19e6856ce6.bindPopup(popup_e2c6e4d0d0412787539ba0529661822e)
+        ;
+
+        
+    
+    
+            var circle_marker_997dd16e8bd150bfdcf6204e15021c06 = L.circleMarker(
+                [-7.599167, 110.952572],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_67eeb994392c32e701dcab8535772eb5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8c4acf737dee8f6438b2ecce20e76b26 = $(`<div id="html_8c4acf737dee8f6438b2ecce20e76b26" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 17 (belokan)<br>Turn left onto Jalan Sukoharjo - Karang Anyar.<br>-7.5991670, 110.9525720<br>1618 m dari awal</div>`)[0];
+                popup_67eeb994392c32e701dcab8535772eb5.setContent(html_8c4acf737dee8f6438b2ecce20e76b26);
+            
+        
+
+        circle_marker_997dd16e8bd150bfdcf6204e15021c06.bindPopup(popup_67eeb994392c32e701dcab8535772eb5)
+        ;
+
+        
+    
+    
+            var circle_marker_b98ddb8f73314a496f609f21aff3ed71 = L.circleMarker(
+                [-7.598331, 110.952845],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_c9729a878ed4d4c767f8ee2ac50d845b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_216835b3d9e7a394186b5de1806a3eee = $(`<div id="html_216835b3d9e7a394186b5de1806a3eee" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 18 (belokan)<br>Turn right onto Jalan Lawu.<br>-7.5983310, 110.9528450<br>1717 m dari awal</div>`)[0];
+                popup_c9729a878ed4d4c767f8ee2ac50d845b.setContent(html_216835b3d9e7a394186b5de1806a3eee);
+            
+        
+
+        circle_marker_b98ddb8f73314a496f609f21aff3ed71.bindPopup(popup_c9729a878ed4d4c767f8ee2ac50d845b)
+        ;
+
+        
+    
+    
+            var circle_marker_71fb96d890a4c347f3c4c43de562fd5b = L.circleMarker(
+                [-7.598084787458572, 110.95366642010828],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_a8a88ccf6e27b57b61a7203f0b7055f9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4e42b108e81be9034e81fa46599712c8 = $(`<div id="html_4e42b108e81be9034e81fa46599712c8" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 19 (interval)<br>-<br>-7.5980848, 110.9536664<br>1824 m dari awal</div>`)[0];
+                popup_a8a88ccf6e27b57b61a7203f0b7055f9.setContent(html_4e42b108e81be9034e81fa46599712c8);
+            
+        
+
+        circle_marker_71fb96d890a4c347f3c4c43de562fd5b.bindPopup(popup_a8a88ccf6e27b57b61a7203f0b7055f9)
+        ;
+
+        
+    
+    
+            var circle_marker_cbece972c30f7b2cad71513ba654ed25 = L.circleMarker(
+                [-7.598144197047368, 110.95462824564285],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_30b7e73bb75ab6333c67342c8f166f8c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a7b3bd9858158444abd7240fa01a2609 = $(`<div id="html_a7b3bd9858158444abd7240fa01a2609" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 20 (interval)<br>-<br>-7.5981442, 110.9546282<br>1930 m dari awal</div>`)[0];
+                popup_30b7e73bb75ab6333c67342c8f166f8c.setContent(html_a7b3bd9858158444abd7240fa01a2609);
+            
+        
+
+        circle_marker_cbece972c30f7b2cad71513ba654ed25.bindPopup(popup_30b7e73bb75ab6333c67342c8f166f8c)
+        ;
+
+        
+    
+    
+            var circle_marker_9c36639e80c7398977b330486adaa0cb = L.circleMarker(
+                [-7.598230844679403, 110.95558879291872],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_1a335cedfa2701266f47bb5d72b01771 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5c8bc946758bb6b94a87f16aa9dec37f = $(`<div id="html_5c8bc946758bb6b94a87f16aa9dec37f" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 21 (interval)<br>-<br>-7.5982308, 110.9555888<br>2036 m dari awal</div>`)[0];
+                popup_1a335cedfa2701266f47bb5d72b01771.setContent(html_5c8bc946758bb6b94a87f16aa9dec37f);
+            
+        
+
+        circle_marker_9c36639e80c7398977b330486adaa0cb.bindPopup(popup_1a335cedfa2701266f47bb5d72b01771)
+        ;
+
+        
+    
+    
+            var circle_marker_1f7acd451bb76f508b0ca6e4328e8126 = L.circleMarker(
+                [-7.598296008566976, 110.9565512315739],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_c60bf41faa717f03225b3f771a8adbd4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6dee66d49db7d73a6f69c84bac864a27 = $(`<div id="html_6dee66d49db7d73a6f69c84bac864a27" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 22 (interval)<br>-<br>-7.5982960, 110.9565512<br>2143 m dari awal</div>`)[0];
+                popup_c60bf41faa717f03225b3f771a8adbd4.setContent(html_6dee66d49db7d73a6f69c84bac864a27);
+            
+        
+
+        circle_marker_1f7acd451bb76f508b0ca6e4328e8126.bindPopup(popup_c60bf41faa717f03225b3f771a8adbd4)
+        ;
+
+        
+    
+    
+            var circle_marker_ebc919ec00e865372be618e4159d22f2 = L.circleMarker(
+                [-7.598413, 110.957508],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_6d5e5d8044a0fcb4e7568a30a122ddbe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_157d948e74197328238ef046902240b6 = $(`<div id="html_157d948e74197328238ef046902240b6" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 23 (belokan)<br>Turn left.<br>-7.5984130, 110.9575080<br>2249 m dari awal</div>`)[0];
+                popup_6d5e5d8044a0fcb4e7568a30a122ddbe.setContent(html_157d948e74197328238ef046902240b6);
+            
+        
+
+        circle_marker_ebc919ec00e865372be618e4159d22f2.bindPopup(popup_6d5e5d8044a0fcb4e7568a30a122ddbe)
+        ;
+
+        
+    
+    
+            var circle_marker_a42f2327fb678bf8c0f771cb1b26c620 = L.circleMarker(
+                [-7.597456, 110.957845],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_e5345499e520bd71248225ef48d415ee = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_49e237984a9373d7692026833528c855 = $(`<div id="html_49e237984a9373d7692026833528c855" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 24 (belokan)<br>Turn right onto Jalan Cipto Mangun Kusumo.<br>-7.5974560, 110.9578450<br>2362 m dari awal</div>`)[0];
+                popup_e5345499e520bd71248225ef48d415ee.setContent(html_49e237984a9373d7692026833528c855);
+            
+        
+
+        circle_marker_a42f2327fb678bf8c0f771cb1b26c620.bindPopup(popup_e5345499e520bd71248225ef48d415ee)
+        ;
+
+        
+    
+    
+            var circle_marker_046b89c8fe598456a0febcad45d03b60 = L.circleMarker(
+                [-7.597641, 110.958465],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_f37aaac8b06a5884b1f8cdeeb4294daf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_da6c56da0462906be6dbe95ced2ee175 = $(`<div id="html_da6c56da0462906be6dbe95ced2ee175" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 25 (belokan)<br>Turn left.<br>-7.5976410, 110.9584650<br>2433 m dari awal</div>`)[0];
+                popup_f37aaac8b06a5884b1f8cdeeb4294daf.setContent(html_da6c56da0462906be6dbe95ced2ee175);
+            
+        
+
+        circle_marker_046b89c8fe598456a0febcad45d03b60.bindPopup(popup_f37aaac8b06a5884b1f8cdeeb4294daf)
+        ;
+
+        
+    
+    
+            var circle_marker_863b719a3adbebeb0935e672b6b7859c = L.circleMarker(
+                [-7.596719350061922, 110.95880805049184],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 1}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_d60d5192705c8b71f56ac7dd19aaf6f4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cd69f51cc49f5dbedaf6d797e499307e = $(`<div id="html_cd69f51cc49f5dbedaf6d797e499307e" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 26 (interval)<br>-<br>-7.5967194, 110.9588081<br>2542 m dari awal</div>`)[0];
+                popup_d60d5192705c8b71f56ac7dd19aaf6f4.setContent(html_cd69f51cc49f5dbedaf6d797e499307e);
+            
+        
+
+        circle_marker_863b719a3adbebeb0935e672b6b7859c.bindPopup(popup_d60d5192705c8b71f56ac7dd19aaf6f4)
+        ;
+
+        
+    
+    
+            var circle_marker_c7e98db4a075037546781990a3721874 = L.circleMarker(
+                [-7.595806, 110.959173],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_1838837de7da0136b73becacbc78a2e6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_47535ba1707df7e5418b6e4af94b2abc = $(`<div id="html_47535ba1707df7e5418b6e4af94b2abc" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 27 (belokan)<br>Turn right.<br>-7.5958060, 110.9591730<br>2652 m dari awal</div>`)[0];
+                popup_1838837de7da0136b73becacbc78a2e6.setContent(html_47535ba1707df7e5418b6e4af94b2abc);
+            
+        
+
+        circle_marker_c7e98db4a075037546781990a3721874.bindPopup(popup_1838837de7da0136b73becacbc78a2e6)
+        ;
+
+        
+    
+    
+            var circle_marker_b3e26031126d1876f086c061099d983b = L.circleMarker(
+                [-7.595927, 110.959493],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_b56bc06a5f58288701f86332b758c078 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_030d23190c7398247193ff2aeeca2862 = $(`<div id="html_030d23190c7398247193ff2aeeca2862" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 28 (belokan)<br>Turn right.<br>-7.5959270, 110.9594930<br>2689 m dari awal</div>`)[0];
+                popup_b56bc06a5f58288701f86332b758c078.setContent(html_030d23190c7398247193ff2aeeca2862);
+            
+        
+
+        circle_marker_b3e26031126d1876f086c061099d983b.bindPopup(popup_b56bc06a5f58288701f86332b758c078)
+        ;
+
+        
+    
+    
+            var circle_marker_38f7d42b0c6100f92a36298dc42c6509 = L.circleMarker(
+                [-7.596627, 110.959618],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d500f9", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(feature_group_26ba775446c3946bd5ac9f4999851277);
+        
+    
+        var popup_b2149fe92d10c26f168ad5d8d313fe29 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_808b5c0f2b2005d10ab72a9356b30abb = $(`<div id="html_808b5c0f2b2005d10ab72a9356b30abb" style="width: 100.0%; height: 100.0%;"><b>Rute 3</b> | node 29 (tujuan)<br>Tiba<br>-7.5966270, 110.9596180<br>2793 m dari awal</div>`)[0];
+                popup_b2149fe92d10c26f168ad5d8d313fe29.setContent(html_808b5c0f2b2005d10ab72a9356b30abb);
+            
+        
+
+        circle_marker_38f7d42b0c6100f92a36298dc42c6509.bindPopup(popup_b2149fe92d10c26f168ad5d8d313fe29)
+        ;
+
+        
+    
+    
+            feature_group_26ba775446c3946bd5ac9f4999851277.addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var marker_c7c518340e65916fcfb88420fac4feca = L.marker(
+                [-7.594776, 110.939914],
+                {
+}
+            ).addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var icon_c37ed7b6b4512d2dfeeb482b7dce8350 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c7c518340e65916fcfb88420fac4feca.bindTooltip(
+                `<div>
+                     Asal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7c518340e65916fcfb88420fac4feca.setIcon(icon_c37ed7b6b4512d2dfeeb482b7dce8350);
+            
+    
+            var marker_eabd950875b400e12256da856c2ca5a3 = L.marker(
+                [-7.59674260198687, 110.95958031499016],
+                {
+}
+            ).addTo(map_f378359c37585e306abf3b070ebf227e);
+        
+    
+            var icon_7b8183f2f1e3bd42c53ac34baadd8dd5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_eabd950875b400e12256da856c2ca5a3.bindTooltip(
+                `<div>
+                     Tujuan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eabd950875b400e12256da856c2ca5a3.setIcon(icon_7b8183f2f1e3bd42c53ac34baadd8dd5);
+            
+    
+            var layer_control_2e1a536d73fc0ac67432004da821c5da_layers = {
+                base_layers : {
+                    "Peta Jalan" : tile_layer_572f129fb71eda3a2df2397a86305a01,
+                    "Satelit" : tile_layer_26de9f7216e17ab6ab71c0dbae44a65d,
+                },
+                overlays :  {
+                    "Rute 1 (2.72 km, 30 node)" : feature_group_013c1274b477909dde7b187a258785f4,
+                    "Rute 2 (2.81 km, 31 node)" : feature_group_242405014b87a7c9aad7508da5f52ba1,
+                    "Rute 3 (2.79 km, 29 node)" : feature_group_26ba775446c3946bd5ac9f4999851277,
+                },
+            };
+            let layer_control_2e1a536d73fc0ac67432004da821c5da = L.control.layers(
+                layer_control_2e1a536d73fc0ac67432004da821c5da_layers.base_layers,
+                layer_control_2e1a536d73fc0ac67432004da821c5da_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_f378359c37585e306abf3b070ebf227e);
+
+        
+</script>
+</html>
