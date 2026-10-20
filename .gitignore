@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Tools
+.pytest_cache/
+.vscode/
+.idea/
+
+# Output hasil simulasi (folder tetap ada lewat .gitkeep)
+output/*
+!output/.gitkeep
